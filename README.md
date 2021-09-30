@@ -1,2 +1,2 @@
-# Fall-2021-CINF201-Introduction-to-Web-Technologies
-Coursework completed for CINF 201
+# CINF 201 Coursework
+Repository for all coursework completed in CINF 201
