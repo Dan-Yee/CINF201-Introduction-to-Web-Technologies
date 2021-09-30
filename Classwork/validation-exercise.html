@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Validation Exercise</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            max-width: 1000px;
+            margin: 0 auto 50px;
+            padding: 0 1em;
+        }
+
+        .row {
+            width: 100%;
+        }
+
+        .row:after,
+        .row:before {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .aside {
+            width: 30%;
+            float: left;
+            padding: 0 2%;
+        }
+
+        .aside a img:hover {
+            border: 2px solid black;
+        }
+
+        .main {
+            width: 65%;
+            float: left;
+            margin-left: 5%;
+            padding: 0 2%;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        .bold {
+            font-weight: bold;
+        }
+
+        nav {
+            background: black;
+            padding: 10px;
+            height: 4.5em;
+        }
+
+        .nav a {
+            float: left;
+            width: 20%;
+            text-align: center;
+            text-decoration: none;
+            font-size: 1.5em;
+            background: black;
+            color: white;
+            padding: 10px;
+        }
+
+        .active {
+            border: 2px solid white;
+        }
+
+        .nav a:hover {
+            border: 2px solid white;
+        }
+
+        .two {
+            float: left;
+            width: 50%;
+            padding: 2%;
+        }
+
+        table,
+        tr,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+
+        img {
+            max-width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <h1>Practice Validation Assignment</h1>
+        <p>There are numerous errors in the HTML on this page and they can appear anywhere in the code. If you right-click the page in Google Chrome and select View page source, the HTML for this page will appear. </p>
+        <p>Your job is to get this HTML document to validate. To do so, you must to go the <a href="http://validator.w3.org/#validate_by_input" target="_blank">W3 Validator</a>, copy/paste your code, and then hit check. If you see only a green bar, then you have completed the assignment. A red/yellow bar indicates that work still needs to be done before the page meets good validation standards.</p>
+        <p>It is important to note that <strong>no content should be deleted</strong>. There is also no need for you to alter the content in the body tag to make it your own. Tags should only be added, deleted, altered, or moved around to pass validation. Don't worry about styles as the primary focus of this assignment should be on code validation.</p>
+        <p>To submit the assignment, you will upload the corrected file to your UAlbany web server area via FileZilla. The link should look like this: <a href="#">albany.edu/~username/cinf201/validation-exercise.html</a>. Username will be replaced with your personal UAlbany ID.</p>
+        <hr>
+	</div>
+    <div class="row">
+		<nav class="nav">
+            <a href="#">Home</a>
+            <a href="#">Services</a>
+            <a class="active" href="#">Blog</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+        <aside class="aside">
+            <h3>Cool Extra Stuff</h3>
+            <p>We like, totally, have like, <strong><em>really cool</em></strong>stuff here for you. Just give us all of your money and we'll give you cool things, we promise.<span class="bold">*</span></p>
+
+            <p><strong>Nifty, Cool Items</strong></p>
+            <ul>
+                <li>New Fidget Spinner</li>
+                <li>Xbox One S</li>
+                <li>Cookies
+                    <ul>
+                        <li>Oreos</li>
+                        <li>Thin Mints</li>
+                        <li>Keebler Elf</li>
+                    </ul>
+                </li>
+                <li>3 Bananas</li>
+                <li>Dictionary</li>
+            </ul>
+            <p><span class="bold">*Disclaimer:</span> Cool things may not be available in which case you'll get an almost new fidget spinner.</p>
+            <p>The image below is clickable and will take your to our latest super cool product.</p>
+            <a href="#"><img src="http://via.placeholder.com/250x150" alt="place holder image"></a>
+        </aside>
+        <main class="main">
+            <article>
+                <h2>A Blog Post</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus, lorem at pulvinar auctor, orci felis blandit diam, tincidunt semper augue nunc vel lacus. Phasellus eleifend tincidunt accumsan. <strong>Nam egestas</strong> nunc turpis, quis sagittis nisi fermentum eget. Ut porttitor imperdiet nisl. Morbi lacinia urna et libero hendrerit, at finibus mi imperdiet. Morbi vitae dolor in lorem egestas rutrum ut quis arcu. Donec posuere congue vestibulum. Sed sed tellus et tellus varius egestas vel at lectus. Etiam feugiat sem tristique eros elementum, ut sollicitudin nisl semper. <a href="#">Read more...</a></p>
+            </article>
+            <article>
+                <h2>Another Blog Post</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus, lorem at pulvinar auctor, orci felis blandit diam, tincidunt semper augue nunc vel lacus. Phasellus eleifend tincidunt accumsan. <strong>Doritos</strong> aren't as good as <em>Sun Chips</em>, just saying. Ut porttitor imperdiet nisl. Morbi lacinia urna et libero hendrerit, at finibus mi imperdiet. Morbi vitae dolor in lorem egestas rutrum ut quis arcu. Donec posuere congue vestibulum. Sed sed tellus et tellus varius egestas vel at lectus. Etiam feugiat sem tristique eros elementum, ut sollicitudin nisl semper. <a href="#">Read more...</a></p>
+			</article>
+			<article>
+                <h2>The Greatest Blog Post</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus, lorem at pulvinar auctor, orci felis blandit diam, tincidunt semper augue nunc vel lacus. Phasellus eleifend tincidunt accumsan. Nam egestas nunc turpis, quis sagittis nisi fermentum eget. Ut porttitor imperdiet nisl. Morbi lacinia urna et libero hendrerit, at finibus mi imperdiet. Morbi vitae dolor in lorem egestas rutrum ut quis arcu. Donec posuere congue vestibulum. Sed sed tellus et tellus varius egestas vel at lectus. Etiam feugiat sem tristique eros elementum, ut sollicitudin nisl semper. <a href="#">Read more...</a></p>
+            </article>
+        </main>
+    </div>
+    <div class="row">
+        <h2>A Page About Things</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus, lorem at pulvinar auctor, orci felis blandit diam, tincidunt semper augue nunc vel lacus. Phasellus eleifend tincidunt accumsan. What does the Fox say? Many things. Ut porttitor imperdiet nisl. Morbi lacinia urna et libero hendrerit, at finibus mi imperdiet. Morbi vitae dolor in lorem egestas rutrum ut quis arcu. Donec posuere congue vestibulum. Sed sed tellus et tellus varius egestas vel at lectus. Etiam feugiat sem tristique eros elementum, ut sollicitudin nisl semper.</p>
+    </div>
+    <div class="row">
+        <div class="two">
+            <h2>A Table With Characters</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Movie/Show</th>
+                        <th>Role</th>
+                        <th>Release Year</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Yoda</td>
+                        <td><a href="#">Star Wars</a></td>
+                        <td>Jedi</td>
+                        <td>1977</td>
+                    </tr>
+                    <tr>
+                        <td>Albus Dumbledore</td>
+                        <td><a href="#">Harry Potter</a></td>
+                        <td>Wizard</td>
+                        <td>1997</td>
+                    </tr>
+                    <tr>
+                        <td>Rick Sanchez</td>
+                        <td><a href="#">Rick and Morty</a></td>
+                        <td>Interdimensional Scientist</td>
+                        <td>2013</td>
+                    </tr>
+                    <tr>
+                        <td>Doctor</td>
+                        <td><a href="#">Doctor Who</a></td>
+                        <td>Extraterrestrial Time Lord</td>
+                        <td>1963</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="two">
+            <h2>Let's Define Some Things</h2>
+            <dl>
+                <dt>Fly</dt>
+                <dd>Move or be hurled quickly through the air</dd>
+                <dd>A winged creature</dd>
+                <dd>An attack move in Pokemon reserved for flying types</dd>
+                <dd>A state of being - see <a href="#">Cool</a>.</dd>
+
+                <dt>Mad</dt>
+                <dd>A state of being, very angry - see <a href="#">Upset.</a></dd>
+                <dd>A lot - see <a href="#">NYC Lingo</a></dd>
+
+                <dt>Crane</dt>
+                <dd>A type of bird</dd>
+                <dd>Machinery designed to lift heavy loads</dd>
+                <dd>Stretching the body (craning the neck)</dd>
+            </dl>
+        </div>
+    </div>
+    <div class="row">
+        <h4>A Really Small Heading</h4>
+        <p>How many times will we have to work with these <strong>boring</strong> HTML Pages?</p>
+        <p>I'm not sure but here is a <em>super cool</em> list of TV show genres I like along with some shows: </p>
+
+        <ul>
+            <li>Sci-Fi
+                <ul>
+                    <li><a href="#">Under the Dome</a></li>
+                    <li>The X-Files<li>
+                </ul>
+            </li>
+            <li>Anime
+                <ul>
+                    <li><a href="#">Full Metal Alchemist</a></li>
+                    <li>Seven Deadly Sins</li>
+                </ul>
+            </li>
+            <li>Horror/Thriller
+                <ul>
+                    <li><a href="#">American Horror Story</a></li>
+                    <li>The Walking Dead</li>
+                </ul>
+            </li>
+        </ul>
+        <hr>
+        <h4>Another Really Small Heading</h4>
+        <p>This is actually all in one paragraph tag<br>
+            <strong>but I'm using a break</strong><br>to <em>separate</em> the lines from each other.</p>
+    </div>
+</body>
+</html>
