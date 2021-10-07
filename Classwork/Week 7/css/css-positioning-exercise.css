@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box;
+}
+.row {
+    width: 100%;
+}
+.row::before, 
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* 
+    Place your CSS after this line. The above lines are
+    so that you don't have to calculate the width of elements
+    using content width, padding, border, and margin. Instead,
+    you only have to think of the margin/width you provide. The
+    padding/border are automatically included in the width calculations.
+
+    The .row styles are if you want to use floats in your CSS.
+    Each row has the before/after psuedo elements cleared. If you 
+    keep floated content in divs with a class of row, they will stay
+    in their containers without moving around the page. You can delete
+    these styles if you want but they are intended to make things easier.
+*/
+
+body {
+	background-color: #073aac;
+	margin: 0 auto;
+	padding-top: 0%;
+}
+
+.container {
+	padding: 0% 10%;
+}
+
+header {
+	padding: 2%;
+	background-color: #ff0000;
+	color: white;
+}
+
+.header h1 {
+	width: 30%;
+	float: left;
+	font-size: 36px;
+}
+
+.header p {
+	width: 70%;
+	float: left;
+	font-size: 20px;
+}
+
+.nav {
+	background-color: #90ee90;
+	border-bottom: 10px dashed white;
+}
+
+.nav ul {
+	padding-left: 1%;
+}
+
+.nav li {
+	list-style: none;
+	display: inline;
+	padding: 0px 25px 25px 0px;
+	font-family: Verdana;
+}
+
+.nav a {
+	text-decoration: none;
+	color: black;
+	font-size: 20px;
+}
+
+.content {
+	width: 80%;
+	float: left;
+	background-color: #cccccc;
+}
+
+.content li {
+	list-style: none;
+	text-align: center;
+	font-size: 26px;
+}
+
+.content h1 {
+	padding-left: 2%;
+	font-size: 36px;
+}
+
+.content p {
+	padding: 0% 5% 0% 2%;
+	font-size: 20px;
+	font-family: Verdana;
+}
+
+
+.sidebar {
+	width: 20%;
+	float: left;
+	padding: 0% 2% 11.75% 2%;
+	background-color: white;
+}
+
+.sidebar p {
+	text-align: center;
+	border: 3px solid black;
+	padding: 5%;
+	margin: 0 auto;
+}
+
+.sidebar img {
+	border: 3px solid black;
+	border-top: none;
+	margin: 0 auto;
+	padding: 13.75%;
+	display: block;
+}
+
+footer {
+	background-color: #000000;
+	text-align: center;
+	color: white;
+}
