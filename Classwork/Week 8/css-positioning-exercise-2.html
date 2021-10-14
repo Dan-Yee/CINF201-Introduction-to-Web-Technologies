@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CSS Positioning Exercise 2</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    /* Add code for your assignment here. */
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0% 25%;
+        padding: 0;
+        border: 1px solid black;
+    }
+
+    .row {
+        width: 100%;
+    }
+
+    .row::before, 
+    .row::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    /* CSS for the page header */
+    .header {
+        background-color: black;
+        color: white;
+        margin-bottom: 1%;
+    }
+    
+    .header h2 {
+        width: 48%;
+        float: left;
+        margin-left: 2%;
+        font-size: 2em;
+    }
+    .header ul {
+        width: 50%;
+        float: left;
+        text-decoration: none;
+    }
+
+    .header li {
+        display: inline;
+        list-style: none;
+        padding: 1.5em;
+    }
+
+    .header a {
+        text-decoration: none;
+        color: white;
+        font-size: 1.5em;
+    }
+
+    /* CSS for image and text directly below header */
+    .main .two {
+        float: left;
+        width: 46%;
+        margin: 0% 2%;
+    }
+    
+    .main img {
+        margin: 3%;
+    }
+
+    /* CSS for three images and caption texts */
+    .main .three {
+        width: 33%;
+        float: left;
+        text-align: center;
+        margin: 2% 0%;
+    }
+
+    .main .three img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .main .three p {
+        margin: 2% 25%;
+    }
+
+    /* CSS for information table */
+    .row table {
+        background-color: black;
+        color: white;
+        border: 1px solid white;
+        margin: 2% auto;
+    }
+
+    .row tr, td, th {
+        padding: 0.5em;
+        border: 1px solid white;
+    }
+
+    /* CSS for blog posts above page footer */
+    .blog .two {
+        width: 44%;
+        background-color: #dddddd;
+        margin: 3%;
+        padding: 3%;
+    }
+
+    /* CSS for page footer */
+    .footer {
+        margin-top: 1%;
+        background-color: black;
+        color: white;
+        text-align: center;
+    }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row header">
+            <nav>
+                <h2>Dan Yee</h2>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="row main">
+            <div class="row">
+                <div class="two">
+                    <img src="http://placehold.it/250x250" alt="dummy image">
+                </div>
+                <div class="two">
+                    <h2>Very Cool Content</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vehicula ipsum magna, nec lobortis nisi eleifend a. Maecenas sit amet sodales lectus. Nulla id magna tellus. Pellentesque facilisis nibh non ante scelerisque, quis venenatis mauris varius. Nullam neque quam, tincidunt quis euismod et, hendrerit at tellus. Aliquam eros ipsum, scelerisque vel laoreet id, ultricies luctus metus. Praesent sodales augue a purus lobortis porttitor. Donec consequat eleifend mauris, id sodales sapien egestas ac. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="three">
+                    <img src="http://placehold.it/150x150" alt="dummy image">
+                    <p>This is a cool, useful product. It is very useful and cool.</p>
+                </div>
+                <div class="three">
+                    <img src="http://placehold.it/150x150" alt="dummy image">
+                    <p>This is a cool, useful product. It is very useful and cool.</p>
+                </div>
+                <div class="three">
+                    <img src="http://placehold.it/150x150" alt="dummy image">
+                    <p>This is a cool, useful product. It is very useful and cool.</p>
+                </div>
+            </div>
+            <div class="row">
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Phone #</th>
+                        <th>Email</th>
+                    </tr>
+                    <tr>
+                        <td>Chris</td>
+                        <td>29</td>
+                        <td>518-867-5309</td>
+                        <td>cvelez@albany.edu</td>
+                    </tr>
+                    <tr>
+                        <td>Courage</td>
+                        <td>24</td>
+                        <td>518-422-0000</td>
+                        <td>CourageDog@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>Scooby</td>
+                        <td>51</td>
+                        <td>518-422-0001</td>
+                        <td>ScoobyDog@gmai.com</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="row blog">
+                <div class="two">
+                    <h3>Blog Post 1</h3>
+                    <p>Maecenas suscipit velit augue, quis euismod nisi accumsan eget. Pellentesque quis convallis dolor. Donec ut scelerisque lacus, et rutrum dolor. Phasellus vel nisl ac quam placerat venenatis nec ac lacus. Suspendisse a luctus tortor. Etiam hendrerit libero elementum lectus fermentum, a maximus nulla congue. Pellentesque posuere maximus orci, quis elementum elit porttitor in. Nam blandit orci sed vestibulum molestie. <br><a href="#">Read more...</a></p>
+                </div>
+                <div class="two">
+                    <h3>Blog Post 2</h3>
+                    <p>Maecenas suscipit velit augue, quis euismod nisi accumsan eget. Pellentesque quis convallis dolor. Donec ut scelerisque lacus, et rutrum dolor. Phasellus vel nisl ac quam placerat venenatis nec ac lacus. Suspendisse a luctus tortor. Etiam hendrerit libero elementum lectus fermentum, a maximus nulla congue. Pellentesque posuere maximus orci, quis elementum elit porttitor in. Nam blandit orci sed vestibulum molestie. <br><a href="#">Read more...</a></p>
+                </div>
+                <div class="two">
+                    <h3>Blog Post 3</h3>
+                    <p>Maecenas suscipit velit augue, quis euismod nisi accumsan eget. Pellentesque quis convallis dolor. Donec ut scelerisque lacus, et rutrum dolor. Phasellus vel nisl ac quam placerat venenatis nec ac lacus. Suspendisse a luctus tortor. Etiam hendrerit libero elementum lectus fermentum, a maximus nulla congue. Pellentesque posuere maximus orci, quis elementum elit porttitor in. Nam blandit orci sed vestibulum molestie. <br><a href="#">Read more...</a></p>
+                </div>
+                <div class="two">
+                    <h3>Blog Post 4</h3>
+                    <p>Maecenas suscipit velit augue, quis euismod nisi accumsan eget. Pellentesque quis convallis dolor. Donec ut scelerisque lacus, et rutrum dolor. Phasellus vel nisl ac quam placerat venenatis nec ac lacus. Suspendisse a luctus tortor. Etiam hendrerit libero elementum lectus fermentum, a maximus nulla congue. Pellentesque posuere maximus orci, quis elementum elit porttitor in. Nam blandit orci sed vestibulum molestie. <br><a href="#">Read more...</a></p>
+                </div>
+            </div>
+            <div class="row footer">
+                <p>Made with &lt;3 by Daniel L. Yee</p>
+            </div>
+        </div>
+        
+    </div>
+    
+</body>
+
+</html>
