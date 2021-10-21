@@ -41,8 +41,10 @@ var userAge = prompt("Please enter your age: ");
 
 if(userAge >= 21) {
     alert("You are old enough to drink! Time to party...:)");
+    console.log("You are " + userAge + " years old and legally allowed to drink alcohol.");
 } else {
     alert("No alcohol for you! womp womp...:(");
+    console.log("You are " + userAge + " years old and not legally allowed to drink alcohol.");
 }
 
 /* Challenge 6: numberAdder Function */
