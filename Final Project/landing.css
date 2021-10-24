@@ -1,0 +1,73 @@
+/* General CSS for all pages */
+* {
+    box-sizing: border-box;
+}
+
+.row {
+    width: 100%;
+}
+
+.row::before, .row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* CSS for Landing Page Only */
+html {
+    background: url("aurora_borealis.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.row h1 {
+    text-align: center;
+    font-family: "Consolas";
+    font-size: 4em;
+    color: white;
+
+    /* Source: https://css-tricks.com/snippets/css/typewriter-effect/ */
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation: typing 3.5s steps(40, end);
+    margin-top: 5%;
+}
+
+.row ul {
+    margin-top: 10%;
+    text-align: center;
+}
+.row ul li {
+    display: inline;
+}
+
+.row ul a {
+    text-decoration: none;
+    font-family: "Consolas";
+    font-size: 2em;
+
+    margin: 0.5%;
+    padding: 2%;
+    background-color: #7b8993;
+    color: white;
+
+    visibility: hidden;
+    animation: fade;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+}
+
+@keyframes fade {
+    from {visibility: hidden; opacity: 0%;}
+    to {visibility: visible; opacity: 100%;}
+}
+
+@keyframes typing {
+    from {width: 0%;}
+    to {width: 100%;}
+}
+
+/* CSS for all other page headers */
