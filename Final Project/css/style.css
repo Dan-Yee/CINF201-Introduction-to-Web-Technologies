@@ -15,6 +15,7 @@
 
 /* CSS for Landing Page */
 .landing {
+    /* Image Source: https://www.usatoday.com/story/news/nation/2021/10/11/aurora-may-visible-northern-us-solar-storm-heads-earth/6090775001/ */
     background-image: url("../images/landing/aurora_borealis.jpg");
     background-size: cover;
     background-repeat: no-repeat;
