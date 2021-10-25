@@ -15,7 +15,7 @@
 
 /* CSS for Landing Page */
 .landing {
-    background-image: url("../aurora_borealis.jpg");
+    background-image: url("../images/landing/aurora_borealis.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
