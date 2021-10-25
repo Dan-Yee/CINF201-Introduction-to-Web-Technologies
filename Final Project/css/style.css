@@ -13,14 +13,14 @@
     clear: both;
 }
 
-/* CSS for Landing Page Only */
-html {
-    background: url("aurora_borealis.jpg");
+/* CSS for Landing Page */
+.landing {
+    background-image: url("../aurora_borealis.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-.row h1 {
+.landing .row h1 {
     text-align: center;
     font-family: "Consolas";
     font-size: 4em;
@@ -35,15 +35,16 @@ html {
     margin-top: 5%;
 }
 
-.row ul {
+.landing .row ul {
     margin-top: 10%;
     text-align: center;
 }
-.row ul li {
+
+.landing .row ul li {
     display: inline;
 }
 
-.row ul a {
+.landing .row ul a {
     text-decoration: none;
     font-family: "Consolas";
     font-size: 2em;
