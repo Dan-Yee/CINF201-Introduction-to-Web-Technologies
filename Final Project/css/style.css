@@ -3,7 +3,7 @@
     box-sizing: border-box;
 }
 
-.row {
+div.row {
     width: 100%;
 }
 
@@ -98,9 +98,75 @@
     display: inline;
 }
 
-/* Possible CSS for Page Footer (unsure if will be implemented) */
-
 /* CSS for About Me Page */
+    /* CSS for Professional Bio */
+.aboutme div.row,.professional {
+    margin: 5% 10%;
+}
+
+.aboutme div.row,.professional h1 {
+    color: white;
+    font-family: "Consolas";
+}
+
+.aboutme div.row,.professional .left {
+    float: left;
+    width: 70%;
+}
+
+.aboutme div.row,.professional .left p {
+    line-height: 1.25em;
+    font-size: 1.5em;
+    font-family: "Consolas";
+    color: white;
+}
+
+.aboutme div.row,.professional .right {
+    float: left;
+    width: 30%;
+}
+
+.aboutme div.row,.professional .right img {
+    width: 45%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 6%;
+}
+
+    /* CSS for Unprofessional Bio */
+.aboutme div.row,.casual {
+    margin: 10% 10%;
+}
+
+.aboutme div.row,.casual h1 {
+    color: white;
+    font-family: "Consolas";
+}
+
+.aboutme div.row,.casual .left {
+    float: left;
+    width: 30%;
+}
+
+.aboutme div.row,.casual .left img {
+    width: 45%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 6%;
+}
+
+.aboutme div.row,.casual .right {
+    float: left;
+    width: 70%;
+}
+
+.aboutme div.row,.casual .right p {
+    line-height: 1.25em;
+    font-size: 1.5em;
+    font-family: "Consolas";
+    color: white;
+}
+
 
 /* CSS for Resume Page */
 
