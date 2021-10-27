@@ -7,7 +7,7 @@ div.row {
     width: 100%;
 }
 
-.row::before, .row::after {
+div.row::before, div.row::after {
     content: "";
     display: table;
     clear: both;
@@ -178,7 +178,7 @@ p {
 
 /* --> CSS for Education Section */
 .resume div.row,.education {
-    margin: 2% 10%;
+    margin: 0% 10%;
 }
 
 .resume div.row,.education .left {
@@ -205,7 +205,7 @@ p {
 
 /* --> CSS for Skills Section */
 .resume div.row,.skills {
-    margin: 8% 10%;
+    margin: 10% 10%;
 }
 
 .resume div.row,.skills .left {
@@ -216,7 +216,7 @@ p {
 .resume div.row,.skills .left img {
     display: inline;
     width: 25%;
-    margin-top: 3%;
+    margin: 0% 2% 2% 0%;
 }
 
 .resume div.row,.skills .right {
@@ -224,6 +224,33 @@ p {
     width: 80%;
 }
 
+/* --> CSS for Activities Section */
+.resume div.row,.activities {
+    margin: 10% 10%;
+}
+
 /* CSS for Projects Page */
+.resume div.row,.activities .left {
+    clear: both;
+    float: left;
+    width: 20%;
+}
+
+.resume div.row,.activities .left img {
+    display: block;
+    margin: 0 auto;
+    width: 25%;
+    margin-top: 6%;
+}
+
+.resume div.row,.activities .right {
+    float: left;
+    width: 80%;
+}
+
+/* --> CSS for Experience Section */
+.resume div.row,.experience {
+    margin: 10% 10%;
+}
 
 /* CSS for Contact Me Page */
