@@ -16,10 +16,24 @@ div.row {
 .current {
     font-weight: bold;
     text-decoration: underline;
+    color: white;
 }
 
 .page {
     background-color: black;
+}
+
+h1, h2, h3 {
+    font-family: "Consolas";
+    color: white;
+}
+
+p {
+    line-height: 1.25em;
+    font-size: 1.25em;
+    font-family: "Consolas";
+    color: white;
+    margin-left: 2%;
 }
 
 /* CSS for Landing Page */
@@ -99,26 +113,14 @@ div.row {
 }
 
 /* CSS for About Me Page */
-    /* CSS for Professional Bio */
+/* --> CSS for Professional Bio */
 .aboutme div.row,.professional {
     margin: 5% 10%;
-}
-
-.aboutme div.row,.professional h1 {
-    color: white;
-    font-family: "Consolas";
 }
 
 .aboutme div.row,.professional .left {
     float: left;
     width: 70%;
-}
-
-.aboutme div.row,.professional .left p {
-    line-height: 1.25em;
-    font-size: 1.5em;
-    font-family: "Consolas";
-    color: white;
 }
 
 .aboutme div.row,.professional .right {
@@ -127,20 +129,15 @@ div.row {
 }
 
 .aboutme div.row,.professional .right img {
-    width: 45%;
+    width: 50%;
     display: block;
     margin: 0 auto;
-    margin-top: 6%;
+    margin-top: 10%;
 }
 
-    /* CSS for Unprofessional Bio */
+/* --> CSS for Unprofessional Bio */
 .aboutme div.row,.casual {
-    margin: 10% 10%;
-}
-
-.aboutme div.row,.casual h1 {
-    color: white;
-    font-family: "Consolas";
+    margin: 15% 10%;
 }
 
 .aboutme div.row,.casual .left {
@@ -149,10 +146,10 @@ div.row {
 }
 
 .aboutme div.row,.casual .left img {
-    width: 45%;
+    width: 50%;
     display: block;
     margin: 0 auto;
-    margin-top: 6%;
+    margin-top: 10%;
 }
 
 .aboutme div.row,.casual .right {
@@ -160,15 +157,48 @@ div.row {
     width: 70%;
 }
 
-.aboutme div.row,.casual .right p {
-    line-height: 1.25em;
-    font-size: 1.5em;
-    font-family: "Consolas";
-    color: white;
+/* CSS for Resume Page */
+.resume div.row,.pdf {
+    width: 10%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 3%;
 }
 
+.resume div.row,.pdf a {
+    display: block;
+    color: white;
+    font-family: "Consolas";
+    text-align: center;
+    text-decoration: none;
+    padding: 1%;
+    border: 1px solid white;
+}
 
-/* CSS for Resume Page */
+.resume div.row,.education {
+    margin: 2% 10%;
+}
+
+.resume div.row,.education .left {
+    float: left;
+    width: 70%;
+}
+
+.resume div.row,.education ul li {
+    color: white;
+    font-family: "Consolas";
+}
+
+.resume div.row,.education .right {
+    float: left;
+    width: 30%;
+}
+
+.resume div.row,.education .right img {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+}
 
 /* CSS for Projects Page */
 
