@@ -132,12 +132,12 @@ p {
     width: 50%;
     display: block;
     margin: 0 auto;
-    margin-top: 10%;
+    margin-top: 5%;
 }
 
 /* --> CSS for Unprofessional Bio */
 .aboutme div.row,.casual {
-    margin: 15% 10%;
+    margin: 10% 10%;
 }
 
 .aboutme div.row,.casual .left {
@@ -149,7 +149,7 @@ p {
     width: 50%;
     display: block;
     margin: 0 auto;
-    margin-top: 10%;
+    margin-top: 5%;
 }
 
 .aboutme div.row,.casual .right {
@@ -158,6 +158,7 @@ p {
 }
 
 /* CSS for Resume Page */
+/* --> CSS for PDF link to resume */
 .resume div.row,.pdf {
     width: 10%;
     display: block;
@@ -175,6 +176,7 @@ p {
     border: 1px solid white;
 }
 
+/* --> CSS for Education Section */
 .resume div.row,.education {
     margin: 2% 10%;
 }
@@ -198,6 +200,28 @@ p {
     display: block;
     margin: 0 auto;
     width: 50%;
+    margin-bottom: 15%;
+}
+
+/* --> CSS for Skills Section */
+.resume div.row,.skills {
+    margin: 8% 10%;
+}
+
+.resume div.row,.skills .left {
+    float: left;
+    width: 20%;
+}
+
+.resume div.row,.skills .left img {
+    display: inline;
+    width: 25%;
+    margin-top: 3%;
+}
+
+.resume div.row,.skills .right {
+    float: left;
+    width: 80%;
 }
 
 /* CSS for Projects Page */
