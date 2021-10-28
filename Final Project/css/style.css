@@ -21,6 +21,8 @@ div.row::before, div.row::after {
 
 .page {
     background-color: black;
+    margin: 0%;
+    padding: 0%;
 }
 
 h1, h2, h3 {
@@ -95,12 +97,12 @@ p {
     to {width: 100%;}
 }
 
-/* CSS for all other page headers (navigation) */
+/* <------------------------- CSS for all other page headers (navigation) -------------------------> */
 .nav ul {
     text-align: center;
 }
 
-.nav ul a {
+.nav ul a, .nav .left a {
     text-decoration: none;
     font-family: "Consolas";
     font-size: 1.25em;
@@ -113,9 +115,9 @@ p {
 }
 
 /* CSS for About Me Page */
-/* --> CSS for Professional Bio */
+/* <------------------------- CSS for Professional Bio -------------------------> */
 .aboutme div.row,.professional {
-    margin: 5% 10%;
+    margin: 2% 10%;
 }
 
 .aboutme div.row,.professional .left {
@@ -128,14 +130,13 @@ p {
     width: 30%;
 }
 
-.aboutme div.row,.professional .right img {
+.aboutme div.row,.professional .right img, .casual .left img {
     width: 50%;
     display: block;
     margin: 0 auto;
-    margin-top: 5%;
 }
 
-/* --> CSS for Unprofessional Bio */
+/* <------------------------- CSS for Unprofessional Bio -------------------------> */
 .aboutme div.row,.casual {
     margin: 10% 10%;
 }
@@ -145,25 +146,18 @@ p {
     width: 30%;
 }
 
-.aboutme div.row,.casual .left img {
-    width: 50%;
-    display: block;
-    margin: 0 auto;
-    margin-top: 5%;
-}
-
 .aboutme div.row,.casual .right {
     float: left;
     width: 70%;
 }
 
 /* CSS for Resume Page */
-/* --> CSS for PDF link to resume */
+/* <------------------------- CSS for PDF link to resume -------------------------> */
 .resume div.row,.pdf {
     width: 10%;
     display: block;
     margin: 0 auto;
-    margin-top: 3%;
+    margin-top: 2%;
 }
 
 .resume div.row,.pdf a {
@@ -174,11 +168,17 @@ p {
     text-decoration: none;
     padding: 1%;
     border: 1px solid white;
+    margin: 5%;
 }
 
-/* --> CSS for Education Section */
+/* <------------------------- CSS for Education Section -------------------------> */
 .resume div.row,.education {
     margin: 0% 10%;
+    clear: both;
+}
+
+.resume div.row, .skills, .activities, .experience {
+    margin: 10%;
 }
 
 .resume div.row,.education .left {
@@ -200,57 +200,34 @@ p {
     display: block;
     margin: 0 auto;
     width: 50%;
-    margin-bottom: 15%;
+    margin-bottom: 20%;
 }
 
-/* --> CSS for Skills Section */
-.resume div.row,.skills {
-    margin: 10% 10%;
+.resume div.row, .skills .left img {
+    display: inline;
+    width: 25%;
+    margin: 0% 3% 3% 0%;
 }
 
-.resume div.row,.skills .left {
+/* Left and Right Columns placements for Skills, Activities, and Experience Sections */
+.resume div.row, .skills .left, .activities .left, .experience .left {
     float: left;
     width: 20%;
 }
 
-.resume div.row,.skills .left img {
-    display: inline;
-    width: 25%;
-    margin: 0% 2% 2% 0%;
-}
-
-.resume div.row,.skills .right {
+.resume div.row, .skills .right, .activities .right, .experience .right {
     float: left;
     width: 80%;
 }
 
-/* --> CSS for Activities Section */
-.resume div.row,.activities {
-    margin: 10% 10%;
-}
-
-/* CSS for Projects Page */
-.resume div.row,.activities .left {
-    clear: both;
-    float: left;
-    width: 20%;
-}
-
-.resume div.row,.activities .left img {
+/* Image Settings for Activities and Experience Section */
+.resume div.row, .activities .left img, .experience .left img {
     display: block;
     margin: 0 auto;
     width: 25%;
-    margin-top: 6%;
+    margin-top: 4%;
 }
 
-.resume div.row,.activities .right {
-    float: left;
-    width: 80%;
-}
-
-/* --> CSS for Experience Section */
-.resume div.row,.experience {
-    margin: 10% 10%;
-}
+/* CSS for Projects Page */
 
 /* CSS for Contact Me Page */
