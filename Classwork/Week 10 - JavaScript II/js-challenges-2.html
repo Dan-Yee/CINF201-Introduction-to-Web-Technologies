@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>JS Challenges 2</title>
+    <style>
+        label, input {
+            display: block;
+        }
+        input {
+            margin-bottom: 10px;
+        }
+        #togglingDiv {
+            height: 200px;
+            width: 200px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+    <body>
+        <h1>JS Challenges 2</h1>
+        <p>Before completing these challenges, please look at the two examples for this week listed below. Both examples contain bits of code which can be used for this assignment.</p>
+        <ul>
+            <li><a href="https://www.albany.edu/~cv762525/cinf201/examples/js-concepts-example-2.html">JS Concepts Example 2</a></li>
+            <li><a href="https://www.albany.edu/~cv762525/cinf201/examples/page-output-example.html">Creating Page Output Example</a></li>
+        </ul>
+        <hr>
+        <h3>Challenge 1</h3>
+        <p>The form below should take in 3 inputs: height, width, and background color. When the user clicks the "Submit Box Info" button, the div below this form with an id of "box" should get the specified height, width, and background color added to it. You'll need to get the value of each input tag to use for styling empty div. You can use the setAttribute method on the div with an id of "box" to get these results. You can also use .style.width, .style.height, etc.</p>
+        <form>
+            <label for="height">Height: </label><input type="text" id="height">
+            <label for="width">Width: </label><input type="text" id="width">
+            <label for="color">Color: </label><input type="text" id="color">
+            <button id="boxSubmit" type="button">Submit Box Info</button>
+        </form>
+        <div id="box"></div>
+        <script>
+            /* 
+                For this challenge, you will need to add an onclick event to the boxSubmit button. 
+                After you get the values from the inputs, you can use them to style the div with an id of "box."
+                The setAttribute method might be the easiest to use. However, if you decide to use the style property,
+                you will need to use it like it is shown below. 
+                
+                Pretend we use a variable called box for our div. If we used a variable called height for the height value,
+                the code would be: 
+                box.style.height = height + "px";
+                
+                You can't just supply the numerical value and so we can use string concatenation to combine the number value provided 
+                with "px" so it can be added as a style. The same would apply if you used setAttribute...the text below is the second argument you'd provide to the setAttribute method.
+                
+                "height: " + height + "px; width: " + width + "px; background: " + color + ";"
+            */
+            // CHALLENGE 1 CODE
+
+            // get the box element
+            var box = document.getElementById("box");
+            document.getElementById("boxSubmit").onclick = function() {
+                // gets value of needed elements
+                var w = document.getElementById("width").value;
+                var h = document.getElementById("height").value;
+                var c = document.getElementById("color").value;
+
+                // Set the width, height and color of the div "box"
+                box.style.width = w + "px";
+                box.style.height = h + "px";
+                box.style.backgroundColor = c;
+            }
+        </script>
+        
+        <h3>Challenges 2 &amp; 3</h3>
+        <p>The form below takes in 1 input, a person's name. After the user clicks "Submit Name", it should tell them what their name is and how long it is. After it tells them that information (challenge 2), it should output their name one extra character at a time (challenge 3). The output should look exactly as it is below except my name will be replaced by the name typed into your form. You will need a variable for your name, a for or while loop, and to use the substr property.</p>
+        <p>Your name is Chris and that is 5 letters long.<br>
+        C<br>
+        Ch<br>
+        Chr<br>
+        Chri<br>
+        Chris</p>
+        <form>
+            First Name: <input type="text" id="firstName">
+            <button id="nameSubmit" type="button">Submit Name</button>
+        </form>
+        <p id="nameArea"></p>
+        
+         <script>
+            /* 
+                To complete this challenge, you'll need to add an onclick event to the button. After the button is clicked
+                get the value of the input using the ".value" property. You'll then target the p tag with an id of "nameArea" 
+                and use the innerHTML property to output the content mentioned in the instructions. 
+                
+                You will also need a for or while loop to loop through the name provided. The value for the loop for where to stop is
+                going to be the length of the name. If you created a variable called firstName, the for loop would look like this: 
+                
+                for(var x = 0; x <= firstName.length; x++) {code in here}
+                
+                While looping through the name, you will use the substr method on the firstName variable to get only a portion of the name. 
+                firstName.substr(0, x) would get the portion of the name from the first character up until whatever number the loop was on.
+                
+                You would then user .innerHTML += to add in the name content. 
+            */
+             
+             // CHALLENGES 2 & 3 CODE   
+             document.getElementById("nameSubmit").onclick = function() {
+                // get string value of user inputted name
+                var name = document.getElementById("firstName").value;
+                
+                // display initial line of information
+                document.getElementById("nameArea").innerHTML = "Your name is " + name + " and it is " + name.length + " characters long.\n";
+                for(var i = 0; i <= name.length; i++) {
+                    document.getElementById("nameArea").innerHTML += (name.substr(0, i) + "<br>");
+                }
+             }
+             
+        </script>
+        <hr>
+        
+        <h3>Challenge 4</h3>
+        <p>There is an empty unordered list below this paragraph. Create an array with at least 4 animals in it. Using a for or while loop, have each item in the array printed onto the page inside of the list (innerHTML combined with "+=" and li tags).</p>
+        <ul id="animalList"></ul>
+        <script>
+            /*
+                To complete this challenge, you will need to create an array with 4 items in it. You will then use a for or while loop
+                to loop through each item in the array. In your loop, you should use the innerHTML property on the ul with an id of 
+                "animalList". You would say .innerHTML += "<li> animalName</li>"; and animalName would be replaced by your reference
+                to the current item in the array. The JS Concepts Example 2 has similar code for this challenge.                
+            */
+            // CHALLENGE 4 CODE
+            // create array of 4 animals
+            var animals = ["shark", "tiger", "dog", "monkey"];
+            
+            // add each element of the array as a list item
+            for(var i = 0; i < animals.length; i++) {
+                document.getElementById("animalList").innerHTML += "<li>"+ animals[i] + "</li>";
+            }
+            
+        </script>
+        
+        <h3>Challenge 5</h3>
+        <p>The following form takes in 3 inputs: width, length, and height. After a user clicks "Submit Dimensions", the form should tell the user the volume of their box. You will need to use a click event on the button and then grab the input values afterward. The formula for the volume of a 3-dimensional box is length x width x height. This is the same as the boxVolume challenge from last week but we are taking the inputs from a form instead of providing them ourselves.</p>
+        <form>
+            <label for="boxWidth">Box Width: </label><input type="text" id="boxWidth">
+            <label for="boxLength">Box Length: </label><input type="text" id="boxLength">
+            <label for="boxHeight">Box Height: </label><input type="text" id="boxHeight">
+            <button type="button" id="submitDimensions">Submit Dimensions</button>
+        </form>
+        <p>Example output: "The volume of your box is 27000."</p>
+        <p id="boxInfo"></p>
+        <script>
+            /* 
+            This challenge requires that you add a click event to the button with an id of "submitDimensions".
+            After the button is clicked, you should grab the values from each input box. You can then use the multiplication
+            operator (*) to multiple the length, width, and height. You will then output the volume of the user's box in one line like so:
+            "The volume of your box is 27000" */
+            
+            // CHALLENGE 5 CODE
+            document.getElementById("submitDimensions").onclick = function() {
+                // get dimensions entered by user
+                var l = document.getElementById("boxLength").value;
+                var w = document.getElementById("boxWidth").value;
+                var h = document.getElementById("boxHeight").value;
+
+                // calculate and edit innerHTML to display volume
+                var volume = l * w * h;
+                document.getElementById("boxInfo").innerHTML = "<p>The volume of your box is " + volume + ".</p>";
+            }
+        </script>
+        
+        <h3>Challenge 6</h3>
+        <p>The div below is currently visible on the page. When the user clicks the "Toggle Div" button below, it should either hide or show the div depending on whether or not it is hidden already. For this, you'll need to use the .style property on the div to either make it display: none or display: block. You will also use an if/else statement to check the display property. When you check the display property, you should check if the value is equal to "block" or an empty string ("").</p>
+        <button type="button" id="toggleDiv">Toggle Div</button>
+        <div id="togglingDiv"></div>
+        
+        <script>
+            /* 
+                For the final challenge, you will need to add a click event to the "toggleDiv" button. 
+                When that button is clicked, you will use an if/else statement to check the style.display value
+                of the div. To check a value, you can use double equal signs (==) which compares values. A single equal 
+                sign is used to assign values. 
+                
+                If the style.display == "block" OR style.display == "", then we want to set the style.display value to "none"
+                Otherwise (else), we want to set the style.display value to "block" to make it reappear.
+            */
+            
+            // CHALLENGE 6 CODE
+            var divID = document.getElementById("togglingDiv");
+            document.getElementById("toggleDiv").onclick = function() {
+                // if style is "block" or ""
+                if((divID.style.display == "block") || (divID.style.display == "")) {
+                    divID.style.display = "none";
+                } else {
+                    divID.style.display = "block";
+                }
+            }
+        </script>
+    </body>
+</html>
