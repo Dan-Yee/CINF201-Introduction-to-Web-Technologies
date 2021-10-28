@@ -134,6 +134,7 @@ p {
     width: 50%;
     display: block;
     margin: 0 auto;
+    margin-top: 5%;
 }
 
 /* <------------------------- CSS for Unprofessional Bio -------------------------> */
@@ -179,6 +180,7 @@ p {
 
 .resume div.row, .skills, .activities, .experience {
     margin: 10%;
+    clear: both;
 }
 
 .resume div.row,.education .left {
@@ -206,7 +208,7 @@ p {
 .resume div.row, .skills .left img {
     display: inline;
     width: 25%;
-    margin: 0% 3% 3% 0%;
+    margin: 5% 3% 3% 0%;
 }
 
 /* Left and Right Columns placements for Skills, Activities, and Experience Sections */
@@ -225,7 +227,7 @@ p {
     display: block;
     margin: 0 auto;
     width: 25%;
-    margin-top: 4%;
+    margin-top: 10%;
 }
 
 /* CSS for Projects Page */
