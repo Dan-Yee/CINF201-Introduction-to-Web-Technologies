@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>JQuery Challenges</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .container {
+            width: 800px;
+            margin: 0 auto;
+        }
+
+        .box {
+            width: 50px;
+            height: 50px;
+            border: 2px solid black;
+            margin: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>JQuery Challenges</h1>
+        <p>For this week, you have a few challenges to complete. Please don't add or remove HTML/CSS code as it will not be necessary for finishing these tasks. You should only be adding JQuery code to the script.js file included in the JQuery-Challenges.zip folder (JQuery reference is already included).Make sure you read everything carefully so you don't miss any requirements.</p>
+        <hr>
+
+        <h2>Challenge 1</h2>
+        <p>Add code so that when the paragraph below is clicked, it disappears. You can achieve this effect with the hide() method.</p>
+        <p id="hideMe">Click to hide me.</p>
+
+        <hr>
+
+        <h2>Challenge 2</h2>
+        <p>Add code so that when text is typed into the input below, that same text also appears inside of the empty paragraph below ("outputArea"). You'll need to use the keyup, html, and val methods in order to do this one.</p>
+        <label for="inputArea">Enter some text:</label>
+        <input id="inputArea" type="text">
+        <p id="outputArea"></p>
+        <hr>
+
+        <h2>Challenge 3</h2>
+        <p>Add code so that when the button below is clicked, the width and height of the box is increased (200px is fine for both dimensions). You'll need the css method for this challenge.</p>
+        <button id="boxChanger" type="button">Increase Box Size</button>
+        <div class="box"></div>
+
+        <hr>
+
+        <h2>Challenge 4</h2>
+        <p>Add code so that when the button below is clicked, the image will fade in or fade out. You can accomplish this with the fade in/fade out or fade toggle methods.</p>
+        <button id="toggleImage" type="button">Toggle Image</button><br>
+        <img class="img" src="https://place-hold.it/300" alt="dummy image">
+        <hr>
+
+        <h2>Challenge 5</h2>
+        <p>Add code so that whenever the button below is clicked, its text changes to tell the user how many times it has been clicked. As an example, after clicking it 1 time, the button should say "I've been clicked 1 time(s)." After it gets clicked 2 times, it will say "I've been clicked 2 time(s)." and so on. You can use the html method to change the text of the button. You'll need to create a counter to keep track of how many times it has been clicked.</p>
+        <button id="clickCounter" type="button">Click me to begin</button>
+        <hr>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Place all code for your challenges below this line
+            
+            // Challenge 1
+            /* 
+                You should add a click event to #hideMe. You can then refer to the element
+                that is clicked with $(this) and then use the .hide() method to hide it.
+            */
+
+            // Used multiple lines for readability
+            $("#hideMe").click(function() {
+                $(this).hide()
+            });
+
+            // Challenge 2
+            /* 
+                You should add a keyup event to #inputArea. Inside of the curly brackets 
+                for the function, you would then target #outputArea with .html() to change
+                the HTML inside of it. Inside of .html(), you will put the value of the input 
+                using $(this) and .val(). $(this) always refers to the element that has the 
+                event happening to it. .val() refers to the value of an input box similar to
+                the .value property in regular JavaScript.
+            */
+            
+            // Used multiple lines for readability
+            $("#inputArea").keyup(function() {
+                $("#outputArea").html("<p>" + $(this).val() + "</p>");
+            });
+
+            // Challenge 3
+            /* 
+                You should add a click event to #boxChanger. Inside of the curly brackets, you'll use the .css() 
+                function on the .box class to change the height and width to 200px. For .css(), you'll need to 
+                put curly brackets inside of it so you can then list your various properties/values which are
+                separated by columns. 
+            */
+            
+            // Used multiple lines for readability
+            $("#boxChanger").click(function() {
+                $(".box").css({"height": "200px", "width": "200px"});
+            });
+            
+            // Challenge 4
+            /*
+                You should add a click event to #toggleImage similar to how you added a click
+                event in Challenge 1. Inside of the function, you will target the image (.img) 
+                and then use the .fadeToggle() function to make it toggle back and forth.
+            */
+
+            // Used multiple lines for readability
+            $("#toggleImage").click(function() {
+                $(".img").fadeToggle();
+            });
+            
+            // Challenge 5
+            /*
+                Create a global variable to store the current count (0). You should then add a click 
+                event to the #clickCounter button. When this button is clicked, you should add 1 
+                to the variable you used for the current count. After you increase the count,
+                you can then use .html() on the button. You can refer to the button with $(this).
+                Inside of .html(), you'll need to use string concatenation to combine your own text
+                with the variable you used to store the count. After you change the html of the button,
+                you should use "return" to return the count so it overwrites the global variable.
+            */
+
+            var count = 0;
+            $("#clickCounter").click(function() {
+                count++;
+                if(count == 1) {
+                    $(this).html("I have been clicked " + count + " time(s).")
+                } else {
+                    $(this).html("I have been clicked " + count + " times.")
+                }
+                return count;
+            });
+        });
+
+    </script>
+</body>
+
+</html>
