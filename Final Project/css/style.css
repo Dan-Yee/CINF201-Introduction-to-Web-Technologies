@@ -16,26 +16,23 @@ div.row::before, div.row::after {
 .current {
     font-weight: bold;
     text-decoration: underline;
-    color: white;
 }
 
 .page {
     background-color: black;
     margin: 0%;
     padding: 0%;
-}
-
-h1, h2, h3 {
-    font-family: "Consolas";
     color: white;
 }
 
 p {
-    line-height: 1.25em;
+    font-family: "Courier New", monospace;
     font-size: 1.25em;
-    font-family: "Consolas";
-    color: white;
-    margin-left: 2%;
+    margin-top: 0;
+}
+
+h1, h3 {
+    font-family: "Courier New", monospace;
 }
 
 /* CSS for Landing Page */
@@ -48,8 +45,8 @@ p {
 
 .landing .row h1 {
     text-align: center;
-    font-family: "Consolas";
-    font-size: 4em;
+    font-family: "Courier New", monospace;
+    font-size: 5em;
     color: white;
 
     /* Source: https://css-tricks.com/snippets/css/typewriter-effect/ */
@@ -57,7 +54,7 @@ p {
     white-space: nowrap;
     margin: 0 auto;
     letter-spacing: .15em;
-    animation: typing 3.5s steps(40, end);
+    animation: typing 3.5s steps(50, end);
     margin-top: 5%;
 }
 
@@ -72,8 +69,9 @@ p {
 
 .landing .row ul a {
     text-decoration: none;
-    font-family: "Consolas";
+    font-family: "Courier New", monospace;
     font-size: 2em;
+    font-weight: bold;
 
     margin: 0.5%;
     padding: 2%;
@@ -92,19 +90,25 @@ p {
     to {visibility: visible; opacity: 100%;}
 }
 
+/* Source: https://css-tricks.com/snippets/css/typewriter-effect/ */
 @keyframes typing {
     from {width: 0%;}
     to {width: 100%;}
 }
 
-/* <------------------------- CSS for all other page headers (navigation) -------------------------> */
+/*  */
+.aboutme main, .resume main, .projects main, .contactme main {
+    margin: 0% 15%;
+}
+
+/* CSS for page header/navigation */
 .nav ul {
     text-align: center;
 }
 
-.nav ul a, .nav .left a {
+.nav .left ul a, .nav .right ul a {
     text-decoration: none;
-    font-family: "Consolas";
+    font-family: "Courier New", monospace;
     font-size: 1.25em;
     color: white;
     padding: 1% 2%;
@@ -114,118 +118,36 @@ p {
     display: inline;
 }
 
-/* CSS for About Me Page */
-/* <------------------------- CSS for Professional Bio -------------------------> */
-.aboutme div.row,.professional {
-    margin: 2% 10%;
-}
-
-.aboutme div.row,.professional .left {
-    float: left;
-    width: 70%;
-}
-
-.aboutme div.row,.professional .right {
-    float: left;
-    width: 30%;
-}
-
-.aboutme div.row,.professional .right img, .casual .left img {
-    width: 50%;
-    display: block;
-    margin: 0 auto;
-}
-
-/* <------------------------- CSS for Unprofessional Bio -------------------------> */
-.aboutme div.row,.casual {
-    margin: 10% 10%;
-}
-
-.aboutme div.row,.casual .left {
-    float: left;
-    width: 30%;
-}
-
-.aboutme div.row,.casual .right {
-    float: left;
-    width: 70%;
-}
-
-/* CSS for Resume Page */
-/* <------------------------- CSS for PDF link to resume -------------------------> */
-.resume div.row,.pdf {
-    width: 10%;
-    display: block;
-    margin: 0 auto;
-}
-
-.resume div.row,.pdf a {
-    display: block;
-    color: white;
-    font-family: "Consolas";
-    text-align: center;
-    text-decoration: none;
-    padding: 1%;
-    border: 1px solid white;
-    margin: 5%;
-}
-
-/* <------------------------- CSS for Education Section -------------------------> */
-.resume div.row,.education {
-    margin: 0% 10%;
-    clear: both;
-}
-
-.resume div.row, .skills, .activities, .experience {
-    margin: 10%;
-    clear: both;
-}
-
-.resume div.row,.education .left {
-    float: left;
-    width: 70%;
-}
-
-.resume div.row,.education ul li {
-    color: white;
-    font-family: "Consolas";
-}
-
-.resume div.row,.education .right {
-    float: left;
-    width: 30%;
-}
-
-.resume div.row,.education .right img {
-    display: block;
-    margin: 0 auto;
-    width: 50%;
-}
-
-.resume div.row, .skills .left img {
-    display: inline;
-    width: 25%;
-    margin: 0% 3% 3% 0%;
-}
-
-/* Left and Right Columns placements for Skills, Activities, and Experience Sections */
-.resume div.row, .skills .left, .activities .left, .experience .left {
+.nav .left {
     float: left;
     width: 20%;
 }
 
-.resume div.row, .skills .right, .activities .right, .experience .right {
+.nav .right {
+    float: left;
+    width: 70%;
+}
+
+.nav .farRight {
+    float: left;
+    width: 10%;
+}
+
+/* CSS for About Me Page */
+.aboutme .professional .left, .aboutme .casual .right {
     float: left;
     width: 80%;
 }
 
-/* Image Settings for Activities and Experience Section */
-.resume div.row, .activities .left img, .experience .left img {
-    display: block;
-    margin: 0 auto;
-    width: 25%;
+.aboutme .professional .right, .aboutme .casual .left {
+    float: left;
+    width: 20%;
 }
 
-/* CSS for Projects Page */
-
-/* CSS for Contact Me Page */
+.aboutme .professional img, .aboutme .casual img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+}

@@ -10,93 +10,33 @@
 
         <title>My Résumé</title>
     </head>
-    <body class = "resume, page">
-        <main class = "main">
-            <nav class = "nav">
-                <ul>
-                    <li><a href = "aboutme.html">About Me</a></li>
-                    <li class = "current"><a href = "resume.html">Résumé</a></li>
-                    <li><a href = "projects.html">Projects</a></li>
-                    <li><a href = "contact.html">Contact Me</a></li>
-                </ul>
-            </nav>
-            <div class = "row, pdf">
-                <a href = "files/Daniel.Yee.Resume.pdf" target = "_blank">View as PDF</a>
-            </div>
-            <div class = "row, education">
+    <body class = "resume page">
+        <header>
+            <nav class = "row nav">
                 <div class = "left">
-                    <h1>Education:</h1>
-                    <h2>University at Albany, State University of New York</h2>
-                    <p>I was admitted to the university in August 2019. I'm currently a Combined BS/MS student studying Computer Science. I'm expected to complete my undergraduate degree in May 2023 and complete my graduate degree in May 2024.</p>
-                    <p>I major in Computer Science with minors in Mathematics and Informatics with a concentration in Computer Science.</p>
-                    <h3>Relevant Coursework:</h3>
                     <ul>
-                        <li>Data Structures in Java</li>
-                        <li>Programming at the Hardware and Software Interface in C</li>
-                        <li>Design and Analysis of Algorithms</li>
+                        <li><a href = "index.html">I Am Dan Yee</a></li>
                     </ul>
                 </div>
                 <div class = "right">
-                    <a href = "https://www.albany.edu/"><img src = "images/resume/ualbany.png" alt = "UAlbany Logo"></a>
+                    <ul>
+                        <li><a href = "aboutme.html">About Me</a></li>
+                        <li class = "current"><a href = "resume.html">Résumé</a></li>
+                        <li><a href = "projects.html">Projects</a></li>
+                        <li><a href = "contact.html">Contact Me</a></li>
+                    </ul>
                 </div>
-            </div>
-            <div class = "row, skills">
-                <h1>Technical Skills:</h1>
-                <div class = "left">
-                    <img src = "images/resume/java.png" alt = "Java Logo">
-                    <img src = "images/resume/python.png" alt = "Python Logo">
-                    <img src = "images/resume/cProgramming.png" alt = "C Logo">
+                <div class = "farRight">
+                    <ul>
+                        <li><button id = "switchMode">Light Mode</button></li>
+                    </ul>
                 </div>
-                <div class = "right">
-                    <p>I've primarily been working in Java for most of my coursework and projects that I've completed over the past 4 years. I also have some experience programming in Python through projects and coursework as well as the C Programming Language through coursework.</p>
-                </div>
-                <div class = "left">
-                    <img src = "images/resume/html5.png" alt = "HTML5 Logo">
-                    <img src = "images/resume/css3.png" alt = "CSS3 Logo">
-                    <img src = "images/resume/bootstrap.png" alt = "Bootstrap Logo">
-                </div>
-                <div class = "right">
-                    <p>On the frontend, I have some experience working in HTML5 and CSS3 for web development. I also have experience working with the Bootstrap4 Framework through a volunteer job from 4 years ago.</p>
-                </div>
-                <div class = "left">
-                    <img src = "images/resume/VSCode.png" alt = "Visual Studio Code Logo">
-                    <img src = "images/resume/eclipseIDE.png" alt = "Eclipse IDE Logo">
-                    <img src = "images/resume/photoshop.png" alt = "Photoshop Logo">
-                </div>
-                <div class = "right">
-                    <p>I primarly code using the IDE's Visual Studio Code and Eclipse. I also have introductory level experience working with images in Adobe Photoshop.</p>
-                </div>
-            </div>
-            <div class = "row, activities">
-                <h1>Extracurricular Activities:</h1>
-                <div class = "left">
-                    <img src = "images/resume/IEEE.jpg" alt = "IEEE UAlbany Logo">
-                </div>
-                <div class = "right">
-                    <p>I am a Club Member of the University at Albany, IEEE Student Branch. As well as presenting some projects I've been working on, I also co-host the in-person Side Project Development Night where other members come to show off their projects or get help or motivation on current projects.</p>
-                </div>
-                <div class = "left">
-                    <img src = "images/resume/codeOrg.png" alt = "Code.org Logo">
-                </div>
-                <div class = "right">
-                    <p>I was an Ambassador for the 2018 Hour of Code event at my high school. During this event, I informed fellow schoolmates of the importance of programming through hands on exercises and videos. After the videos, participants were directed to a website containing simplified programming activities to work on.</p>
-                </div>
-            </div>
-            <div class = "row, experience">
-                <h1>Work Experience:</h1>
-                <div class = "left">
-                    <img src = "images/resume/subway.png" alt = "Subway Logo">
-                </div>
-                <div class = "right">
-                    <p>I've been working at Subway part-time since April 2019. Throughout all my time there, I've improved on my public speaking skills as well as my critical thinking and problem-solving skills.</p>
-                </div>
-                <div class = "left">
-                    <img src = "images/resume/cascsa.png" alt = "CASCSA Logo">
-                </div>
-                <div class = "right">
-                    <p>I worked at Chinese-American Sports and Community Service Association as the Assistant Secretary from March 2018 to August 2019. Throughout that time, I voluntarily redesigned and rebuilt the organizations website using HTML/CSS and the Bootstrap framework.</p>
-                </div>
-            </div>
+            </nav>
+        </header>
+        <main>
         </main>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src = "javascript/script.js"></script>
     </body>
 </html>

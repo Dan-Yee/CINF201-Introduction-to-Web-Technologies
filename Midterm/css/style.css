@@ -1,0 +1,231 @@
+/* General CSS for all pages */
+* {
+    box-sizing: border-box;
+}
+
+div.row {
+    width: 100%;
+}
+
+div.row::before, div.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.current {
+    font-weight: bold;
+    text-decoration: underline;
+    color: white;
+}
+
+.page {
+    background-color: black;
+    margin: 0%;
+    padding: 0%;
+}
+
+h1, h2, h3 {
+    font-family: "Consolas";
+    color: white;
+}
+
+p {
+    line-height: 1.25em;
+    font-size: 1.25em;
+    font-family: "Consolas";
+    color: white;
+    margin-left: 2%;
+}
+
+/* CSS for Landing Page */
+.landing {
+    /* Image Source: https://www.usatoday.com/story/news/nation/2021/10/11/aurora-may-visible-northern-us-solar-storm-heads-earth/6090775001/ */
+    background-image: url("../images/landing/aurora_borealis.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.landing .row h1 {
+    text-align: center;
+    font-family: "Consolas";
+    font-size: 4em;
+    color: white;
+
+    /* Source: https://css-tricks.com/snippets/css/typewriter-effect/ */
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
+    animation: typing 3.5s steps(40, end);
+    margin-top: 5%;
+}
+
+.landing .row ul {
+    margin-top: 10%;
+    text-align: center;
+}
+
+.landing .row ul li {
+    display: inline;
+}
+
+.landing .row ul a {
+    text-decoration: none;
+    font-family: "Consolas";
+    font-size: 2em;
+
+    margin: 0.5%;
+    padding: 2%;
+    background-color: #7b8993;
+    color: white;
+
+    visibility: hidden;
+    animation: fade;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+}
+
+@keyframes fade {
+    from {visibility: hidden; opacity: 0%;}
+    to {visibility: visible; opacity: 100%;}
+}
+
+@keyframes typing {
+    from {width: 0%;}
+    to {width: 100%;}
+}
+
+/* <------------------------- CSS for all other page headers (navigation) -------------------------> */
+.nav ul {
+    text-align: center;
+}
+
+.nav ul a, .nav .left a {
+    text-decoration: none;
+    font-family: "Consolas";
+    font-size: 1.25em;
+    color: white;
+    padding: 1% 2%;
+}
+
+.nav ul li {
+    display: inline;
+}
+
+/* CSS for About Me Page */
+/* <------------------------- CSS for Professional Bio -------------------------> */
+.aboutme div.row,.professional {
+    margin: 2% 10%;
+}
+
+.aboutme div.row,.professional .left {
+    float: left;
+    width: 70%;
+}
+
+.aboutme div.row,.professional .right {
+    float: left;
+    width: 30%;
+}
+
+.aboutme div.row,.professional .right img, .casual .left img {
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+/* <------------------------- CSS for Unprofessional Bio -------------------------> */
+.aboutme div.row,.casual {
+    margin: 10% 10%;
+}
+
+.aboutme div.row,.casual .left {
+    float: left;
+    width: 30%;
+}
+
+.aboutme div.row,.casual .right {
+    float: left;
+    width: 70%;
+}
+
+/* CSS for Resume Page */
+/* <------------------------- CSS for PDF link to resume -------------------------> */
+.resume div.row,.pdf {
+    width: 10%;
+    display: block;
+    margin: 0 auto;
+}
+
+.resume div.row,.pdf a {
+    display: block;
+    color: white;
+    font-family: "Consolas";
+    text-align: center;
+    text-decoration: none;
+    padding: 1%;
+    border: 1px solid white;
+    margin: 5%;
+}
+
+/* <------------------------- CSS for Education Section -------------------------> */
+.resume div.row,.education {
+    margin: 0% 10%;
+    clear: both;
+}
+
+.resume div.row, .skills, .activities, .experience {
+    margin: 10%;
+    clear: both;
+}
+
+.resume div.row,.education .left {
+    float: left;
+    width: 70%;
+}
+
+.resume div.row,.education ul li {
+    color: white;
+    font-family: "Consolas";
+}
+
+.resume div.row,.education .right {
+    float: left;
+    width: 30%;
+}
+
+.resume div.row,.education .right img {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+}
+
+.resume div.row, .skills .left img {
+    display: inline;
+    width: 25%;
+    margin: 0% 3% 3% 0%;
+}
+
+/* Left and Right Columns placements for Skills, Activities, and Experience Sections */
+.resume div.row, .skills .left, .activities .left, .experience .left {
+    float: left;
+    width: 20%;
+}
+
+.resume div.row, .skills .right, .activities .right, .experience .right {
+    float: left;
+    width: 80%;
+}
+
+/* Image Settings for Activities and Experience Section */
+.resume div.row, .activities .left img, .experience .left img {
+    display: block;
+    margin: 0 auto;
+    width: 25%;
+}
+
+/* CSS for Projects Page */
+
+/* CSS for Contact Me Page */

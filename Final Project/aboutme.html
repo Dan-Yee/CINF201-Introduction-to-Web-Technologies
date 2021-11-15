@@ -10,42 +10,54 @@
 
         <title>About Me</title>
     </head>
-    <body class = "aboutme, page">
-        <main class = "main">
-            <nav class = "nav">
-                <ul>
-                    <li class = "current"><a href = "aboutme.html">About Me</a></li>
-                    <li><a href = "resume.html">Résumé</a></li>
-                    <li><a href = "projects.html">Projects</a></li>
-                    <li><a href = "contact.html">Contact Me</a></li>
-                </ul>
+    <body class = "aboutme page">
+        <header>
+            <nav class = "row nav">
+                <div class = "left">
+                    <ul>
+                        <li><a href = "index.html">I Am Dan Yee</a></li>
+                    </ul>
+                </div>
+                <div class = "right">
+                    <ul>
+                        <li class = "current"><a href = "aboutme.html">About Me</a></li>
+                        <li><a href = "resume.html">Résumé</a></li>
+                        <li><a href = "projects.html">Projects</a></li>
+                        <li><a href = "contact.html">Contact Me</a></li>
+                    </ul>
+                </div>
+                <div class = "farRight">
+                    <ul>
+                        <li><button id = "switchMode">Light Mode</button></li>
+                    </ul>
+                </div>
             </nav>
-            <div class = "row, professional">
+        </header>
+        <main>
+            <div class = "row professional">
                 <h1>Professional Bio:</h1>
                 <div class = "left">
                     <p>Daniel is an undergraduate student studying Computer Science at the University at Albany, SUNY with interests in web development and software engineering. He is working towards becoming a software developer to enhance his skills and knowledge in the field of Computer Science.</p>
                     <p>His most recent accomplishment was being admitted to the Combined Masters of Science program in Computer Science at the University at Albany, SUNY starting in Spring 2022.</p>
                 </div>
                 <div class = "right">
-                    <img src = "images/aboutme/professionalPhoto.jpg" alt = "Professional Photo">
+                    <img src = "images/aboutme/professionalPhoto.jpg" alt = "Professional Photo of Dan Yee">
                 </div>
             </div>
-            <br>
-            <br>
-            <div class = "row, casual">
-                <h1>Unprofessional/Casual Bio:</h1>
+            <div class = "row casual">
+                <h1>Casual Bio:</h1>
                 <div class = "left">
-                    <img src = "images/aboutme/casualPhoto.jpg" alt = "Casual Photo">
+                    <img src = "images/aboutme/casualPhoto.jpg" alt = "Casual Photo of Dan Yee">
                 </div>
                 <div class = "right">
                     <p>Hey there! I'm Dan. I study Computer Science at UAlbany. I'm mostly interested in software engineering and backend development, but I also have a little bit of interest in frontend web development.</p>
-                    <p>I love to travel and visit new places, especially in my hometown, New York City. There's always something new to see and do in the city. If I'm not travelling, I spend a good chunk of my free time watching movies. I love sci-fi and thriller films. Horror movies are also good, but I'm less inclined to watch them.</p>
+                    <p>I love to travel and visit new places, especially in my hometown of New York City. There's always a new restaurant to go and try or a new attraction to visit just for fun. My absolute favorite place to visit is The Edge Observation Deck in Hudson Yards, NY. It's a 1100+ ft. outdoor observation deck and the view makes me speechless.</p>
+                    <p>If I'm not traveling, I spend a good chunk of my free time watching movies. I love sci-fi and thriller type films. Horror movies are also good, but I'm less inclined to watch them. One of my all-time favorite movie is Interstellar(2014). Although, it's been a long time since I've watched it, the mysterious ending always leaves me hooked to it.</p>
                 </div>
             </div>
-                <!-- Possible slideshow to accompany my casual bio -->
-            <footer class = "footer">
-                <!-- Possible Page footer with site index and links back to Landing page -->
-            </footer>
         </main>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src = "javascript/script.js"></script>
     </body>
 </html>
