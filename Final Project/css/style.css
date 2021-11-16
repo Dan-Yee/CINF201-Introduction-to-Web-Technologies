@@ -36,9 +36,10 @@ li {
     margin-top: 0;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
     font-family: "Courier New", monospace;
-    margin-top: 0%;
+    margin-top: 1%;
+    margin-bottom: 0;
 }
 
 /* Maybe move to different section of CSS doc */
@@ -243,5 +244,62 @@ h1, h2, h3 {
     width: 100%;
     min-width: 100px;
     max-width: 100px;
+    height: auto;
+}
+
+/* CSS for Projects Page */
+.projects #directory li {
+    cursor: pointer;
+}
+
+.projects .project .description p {
+    margin-top: 1%;
+}
+
+.projects .project .description ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.projects .project .description ul li {
+    display: inline;
+}
+
+.projects .project .description a {
+    padding: 0.5%;
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+}
+
+/* Projects Page: Blackjack Game Section */
+/* Projects Page: Discord Bot Section */
+.projects .project .blackjackColumn, .projects .project .discordColumn {
+    width: 33.33%;
+    float: left;
+}
+
+.projects .project .blackjackColumn img, .projects .project .discordColumn img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    min-width: 400px;
+    max-width: 400px;
+    height: auto;
+}
+
+/* Projects Page: BASIC Interpreter Section */
+.projects .project .interpreterColumn {
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+
+.projects .project .interpreterColumn img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    min-width: 650px;
+    max-width: 650px;
     height: auto;
 }

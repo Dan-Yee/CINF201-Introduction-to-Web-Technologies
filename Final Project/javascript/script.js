@@ -1,3 +1,7 @@
+/**
+ * Function for all pages
+ */
+
 /*
 Function that flips the page between light mode and dark mode by changing text colors and background colors.
 */
@@ -17,6 +21,9 @@ $("#switchMode").click(function() {
         $(".resume .pdf a").css({"color": "black", "border": "1px solid black"});
         $(".arrow").css({"border": "solid black", "border-width": "0px 3px 3px 0px"});
 
+        // editing CSS for Projects page to switch to light mode
+        $(".projects .project .description a").css({"color": "black", "border": "1px solid black"});
+
         $(this).html("Dark Mode");
         lightMode = 1;
     } else if(lightMode == 1) {
@@ -33,11 +40,18 @@ $("#switchMode").click(function() {
         $(".resume .pdf a").css({"color": "white", "border": "1px solid white"});
         $(".arrow").css({"border": "solid white", "border-width": "0px 3px 3px 0px"});
 
+        // editing CSS for Projects page to switch to dark mode
+        $(".projects .project .description a").css({"color": "white", "border": "1px solid white"});
+
         $(this).html("Light Mode");
         lightMode = 0;
     }
     return lightMode;
 });
+
+/**
+ * Functions for Resume Page
+ */
 
 /* Function that hides all the content from Skills, Activities, and Experience sections */
 $(document).ready(function() {
@@ -74,4 +88,52 @@ $("#experienceDropdown").click(function() {
         $(this).removeClass("downArrow").addClass("rightArrow");
     }
     $("#experienceSection").fadeToggle();
+});
+
+/**
+ * Functions for Projects Page
+ */
+$(document).ready(function() {
+    $("#blackjackSection").hide();
+    $("#discordBotSection").hide();
+    $("#interpreterSection").hide();
+});
+
+/* Show Blackjack Game project and hide other projects */
+$("#blackjackGame").click(function() {
+    if(!$(this).hasClass("selected")) {
+        $(this).addClass("selected");                           // block ability to click same project name again
+        $("#discordBot").removeClass("selected");
+        $("#basicInterpreter").removeClass("selected");
+
+        $("#blackjackSection").fadeToggle();
+        $("#discordBotSection").hide();
+        $("#interpreterSection").hide();
+    }
+});
+
+/* Show Discord Bot project and hide other projects */
+$("#discordBot").click(function() {
+    if(!$(this).hasClass("selected")) {
+        $(this).addClass("selected");                           // block ability to click same project name again
+        $("#blackjackGame").removeClass("selected");
+        $("#basicInterpreter").removeClass("selected");
+
+        $("#blackjackSection").hide();
+        $("#discordBotSection").fadeToggle();
+        $("#interpreterSection").hide();
+    }
+});
+
+/* Show BASIC Interpreter project and hide other projects */
+$("#basicInterpreter").click(function() {
+    if(!$(this).hasClass("selected")) {
+        $(this).addClass("selected");                           // block ability to click same project name again
+        $("#blackjackGame").removeClass("selected");
+        $("#discordBot").removeClass("selected");
+
+        $("#blackjackSection").hide();
+        $("#discordBotSection").hide();
+        $("#interpreterSection").fadeToggle();
+    }
 });
