@@ -282,9 +282,9 @@ h1, h2, h3, h4 {
 .projects .project .blackjackColumn img, .projects .project .discordColumn img {
     display: block;
     margin: 0 auto;
-    width: 100%;
-    min-width: 400px;
-    max-width: 400px;
+    width: 95%;
+    min-width: 50%;
+    max-width: 100%;
     height: auto;
 }
 
@@ -298,8 +298,8 @@ h1, h2, h3, h4 {
 .projects .project .interpreterColumn img {
     display: block;
     margin: 0 auto;
-    width: 100%;
-    min-width: 650px;
-    max-width: 650px;
+    width: 95%;
+    min-width: 50%;
+    max-width: 100%;
     height: auto;
 }
