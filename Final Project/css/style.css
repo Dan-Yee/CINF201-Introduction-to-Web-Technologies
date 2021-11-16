@@ -31,8 +31,33 @@ p {
     margin-top: 0;
 }
 
-h1, h3 {
+li {
     font-family: "Courier New", monospace;
+    margin-top: 0;
+}
+
+h1, h2, h3 {
+    font-family: "Courier New", monospace;
+    margin-top: 0%;
+}
+
+/* Maybe move to different section of CSS doc */
+/* Source: https://www.w3schools.com/howto/howto_css_arrows.asp */
+.arrow {
+    border: solid white;
+    border-width: 0px 3px 3px 0px;
+    display: inline-block;
+    padding: 5px;
+}
+
+.rightArrow {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.downArrow {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
 }
 
 /* CSS for Landing Page */
@@ -96,7 +121,7 @@ h1, h3 {
     to {width: 100%;}
 }
 
-/*  */
+/* CSS to structure the content of all pages except landing page */
 .aboutme main, .resume main, .projects main, .contactme main {
     margin: 0% 15%;
 }
@@ -148,6 +173,75 @@ h1, h3 {
     display: block;
     margin: 0 auto;
     width: 100%;
+    min-width: 200px;
     max-width: 200px;
+    height: auto;
+}
+
+/* CSS for Resume Page */
+/* Resume Page: PDF Section */
+.resume .pdf {
+    width: 100%;
+    float: left;
+    margin: 1% 0%;
+    text-align: center;
+}
+
+.resume .pdf a {
+    padding: 0.355% 2%;
+    border: 1px solid white;
+    text-decoration: none;
+    font-family: "Courier New", monospace;
+    color: white;
+}
+
+/* Resume Page: Education Section */
+.resume .education .left {
+    width: 70%;
+    float: left;
+}
+
+.resume .education .right {
+    width: 30%;
+    float: left;
+}
+
+.resume .education img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    min-width: 250px;
+    max-width: 250px;
+    height: auto;
+}
+
+/* Resume Page: Skills Section */
+/* Resume Page: Activities Section */
+/* Resume Page: Experience Section */
+.resume .skills .left, .resume .activities .left, .resume .experience .left {
+    width: 25%;
+    float: left;
+}
+
+.resume .skills .right, .resume .activities .right, .resume .experience .right {
+    width: 75%;
+    float: left;
+}
+
+.resume .skills .left img {
+    display: inline;
+    margin-right: 2%;
+    width: 100%;
+    min-width: 75px;
+    max-width: 75px;
+    height: auto;
+}
+
+.resume .activities .left img, .resume .experience .left img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    min-width: 100px;
+    max-width: 100px;
     height: auto;
 }
