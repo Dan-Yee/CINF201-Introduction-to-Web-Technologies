@@ -13,6 +13,7 @@ $("#switchMode").click(function() {
         // editing general CSS for all pages
         $(".page").css({"background-color": "white", "color": "black"});
         $(".nav .left ul a, .nav .right ul a").css({"color": "black"});
+        $(".nav .farRight ul li").css({"border": "1px solid black"});
 
         // editing CSS for About Me page to switch to light mode
         $(".aboutme .professional img, .aboutme .casual img").css({"border": "3px solid black"});
@@ -32,6 +33,7 @@ $("#switchMode").click(function() {
         // editing general CSS for all pages
         $(".page").css({"background-color": "black", "color": "white"});
         $(".nav .left ul a, .nav .right ul a").css({"color": "white"});
+        $(".nav .farRight ul li").css({"border": "1px solid white"});
 
         // editing CSS for About Me page to switch to dark mode
         $(".aboutme .professional img, .aboutme .casual img").css({"border": "none"});
@@ -61,8 +63,8 @@ $(document).ready(function() {
 });
 
 /* Function that toggles visibility of Skills section and adjusts arrow image */
-$("#skillsDropdown").click(function() {
-    if($(".skillArrow").hasClass("rightArrow")) {
+$("#skillsArrow").click(function() {
+    if($(this).hasClass("rightArrow")) {
         $(this).removeClass("rightArrow").addClass("downArrow");
     } else {
         $(this).removeClass("downArrow").addClass("rightArrow");
@@ -71,8 +73,8 @@ $("#skillsDropdown").click(function() {
 });
 
 /* Function that toggles visibility of Activities section and adjusts arrow image */
-$("#activitiesDropdown").click(function() {
-    if($(".activitiesArrow").hasClass("rightArrow")) {
+$("#activitiesArrow").click(function() {
+    if($(this).hasClass("rightArrow")) {
         $(this).removeClass("rightArrow").addClass("downArrow");
     } else {
         $(this).removeClass("downArrow").addClass("rightArrow");
@@ -81,8 +83,8 @@ $("#activitiesDropdown").click(function() {
 });
 
 /* Function that toggles visibility of Experience section and adjusts arrow image */
-$("#experienceDropdown").click(function() {
-    if($(".experienceArrow").hasClass("rightArrow")) {
+$("#experienceArrow").click(function() {
+    if($(this).hasClass("rightArrow")) {
         $(this).removeClass("rightArrow").addClass("downArrow");
     } else {
         $(this).removeClass("downArrow").addClass("rightArrow");
@@ -100,40 +102,49 @@ $(document).ready(function() {
 });
 
 /* Show Blackjack Game project and hide other projects */
-$("#blackjackGame").click(function() {
-    if(!$(this).hasClass("selected")) {
-        $(this).addClass("selected");                           // block ability to click same project name again
-        $("#discordBot").removeClass("selected");
-        $("#basicInterpreter").removeClass("selected");
-
-        $("#blackjackSection").fadeToggle();
-        $("#discordBotSection").hide();
-        $("#interpreterSection").hide();
+$("#blackjackArrow").click(function() {
+    if($(this).hasClass("rightArrow")) {
+        $(this).removeClass("rightArrow").addClass("downArrow");
+    } else {
+        $(this).removeClass("downArrow").addClass("rightArrow");
     }
+    $("#blackjackSection").fadeToggle();
+    $("#discordBotSection").hide();
+    $("#interpreterSection").hide();
+
+    // reset arrow positions of other projects that have been hidden
+    $("#discordBotArrow").removeClass("downArrow").addClass("rightArrow");
+    $("#interpreterArrow").removeClass("downArrow").addClass("rightArrow");
 });
 
 /* Show Discord Bot project and hide other projects */
-$("#discordBot").click(function() {
-    if(!$(this).hasClass("selected")) {
-        $(this).addClass("selected");                           // block ability to click same project name again
-        $("#blackjackGame").removeClass("selected");
-        $("#basicInterpreter").removeClass("selected");
-
-        $("#blackjackSection").hide();
-        $("#discordBotSection").fadeToggle();
-        $("#interpreterSection").hide();
+$("#discordBotArrow").click(function() {
+    if($(this).hasClass("rightArrow")) {
+        $(this).removeClass("rightArrow").addClass("downArrow");
+    } else {
+        $(this).removeClass("downArrow").addClass("rightArrow");
     }
+    $("#blackjackSection").hide();
+    $("#discordBotSection").fadeToggle();
+    $("#interpreterSection").hide();
+
+    // reset arrow positions of other projects that have been hidden
+    $("#blackjackArrow").removeClass("downArrow").addClass("rightArrow");
+    $("#interpreterArrow").removeClass("downArrow").addClass("rightArrow");
 });
 
 /* Show BASIC Interpreter project and hide other projects */
-$("#basicInterpreter").click(function() {
-    if(!$(this).hasClass("selected")) {
-        $(this).addClass("selected");                           // block ability to click same project name again
-        $("#blackjackGame").removeClass("selected");
-        $("#discordBot").removeClass("selected");
-
-        $("#blackjackSection").hide();
-        $("#discordBotSection").hide();
-        $("#interpreterSection").fadeToggle();
+$("#interpreterArrow").click(function() {
+    if($(this).hasClass("rightArrow")) {
+        $(this).removeClass("rightArrow").addClass("downArrow");
+    } else {
+        $(this).removeClass("downArrow").addClass("rightArrow");
     }
+    $("#blackjackSection").hide();
+    $("#discordBotSection").hide();
+    $("#interpreterSection").fadeToggle();
+
+    // reset arrow positions of other projects that have been hidden
+    $("#blackjackArrow").removeClass("downArrow").addClass("rightArrow");
+    $("#discordBotArrow").removeClass("downArrow").addClass("rightArrow"); 
 });

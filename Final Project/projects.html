@@ -28,91 +28,93 @@
                 </div>
                 <div class = "farRight">
                     <ul>
-                        <li><button id = "switchMode">Light Mode</button></li>
+                        <li id = "switchMode">Light Mode</li>
                     </ul>
                 </div>
             </nav>
         </header>
         <main>
             <div class = "row">
-                <h1>Programming Projects I've worked on:</h1>
-                <h4>Select one to view more details</h4>
-                <ul id = "directory">
-                    <li id = "blackjackGame">Blackjack Game using Java Swing</li>
-                    <li id = "discordBot">AZN Flush Discord Bot</li>
-                    <li id = "basicInterpreter">BASIC Programming Language Interpreter</li>
-                </ul>
-                <hr>
-            </div>
-            <div class = "row project" id = "blackjackSection">
-                <div class = "row">
-                    <div class = "blackjackColumn">
-                        <img src = "images/projects//blackjack/blackjackGameStart.png" alt = "Blackjack Game on Start">
+                <h1>Blackjack using Java Swing <i class = "arrow rightArrow" id = "blackjackArrow"></i></h1>
+                <div class = "row project" id = "blackjackSection">
+                    <div class = "row">
+                        <div class = "blackjackColumn">
+                            <img src = "images/projects//blackjack/blackjackGameStart.png" alt = "Blackjack Game on Start">
+                        </div>
+                        <div class = "blackjackColumn">
+                            <img src = "images/projects/blackjack/blackjackGameWin.png" alt = "Blackjack Game Player Win">
+                        </div>
+                        <div class = "blackjackColumn">
+                            <img src = "images/projects/blackjack/blackjackGameLose.png" alt = "Blackjack Game Player Lose">
+                        </div>
                     </div>
-                    <div class = "blackjackColumn">
-                        <img src = "images/projects/blackjack/blackjackGameWin.png" alt = "Blackjack Game Player Win">
+                    <div class = "row description">
+                        <p>This project started as a text-based project. Over a weekend, I designed and built a text-based version of Blackjack. That version had hit and stand functions for the player and was designed to be single player with an automated dealer.</p>
+                        <p>However, a text-based game is too simple. I wanted to make it better and decided to convert the text-based game to one with a GUI using Java Swing. But, I didn't know any Java Swing at the time. To complete this project, I had to learn the basics of Java Swing and how to use it to design a UI with buttons linked to action listeners.</p>
+                        <p>Unlike traditional Blackjack at a casino, this version is completely up to luck. The card drawing algorithm generates a pseudorandom number which corresponds to a card in the deck. The player hits until they choose to stand whereas the dealer must hit until their hand value is at least 17. In multiple test runs, the player has busted their hand just because the algorithm picked two cards with values of 10.</p>
+                        <h3>Source Code is available on Github</h3>
+                        <ul>
+                            <li><a href = "https://github.com/Dan-Yee/Blackjack-Text-Based" target = "_blank">Text-Based Blackjack Game</a></li>
+                            <li><a href = "https://github.com/Dan-Yee/Blackjack-GUI-Based" target = "_blank">Blackjack Game using Java Swing</a></li>
+                        </ul>
+                        <hr>
                     </div>
-                    <div class = "blackjackColumn">
-                        <img src = "images/projects/blackjack/blackjackGameLose.png" alt = "Blackjack Game Player Lose">
-                    </div>
-                </div>
-                <div class = "row description">
-                    <p>This project started as a text-based project. Over a weekend, I designed and built a text-based version of Blackjack. That version had hit and stand functions for the player and was designed to be single player with an automated dealer.</p>
-                    <p>However, a text-based game is too simple. I wanted to make it better and decided to convert the text-based game to one with a GUI using Java Swing. But, I didn't know any Java Swing at the time. To complete this project, I had to learn the basics of Java Swing and how to use it to design a UI with buttons linked to action listeners.</p>
-                    <p>Unlike traditional Blackjack at a casino, this version is completely up to luck. The card drawing algorithm generates a pseudorandom number which corresponds to a card in the deck. The player hits until they choose to stand whereas the dealer must hit until their hand value is at least 17. In multiple test runs, the player has busted their hand just because the algorithm picked two cards with values of 10.</p>
-                    <h3>Source Code is available on Github</h3>
-                    <ul>
-                        <li><a href = "https://github.com/Dan-Yee/Blackjack-Text-Based" target = "_blank">Text-Based Blackjack Game</a></li>
-                        <li><a href = "https://github.com/Dan-Yee/Blackjack-GUI-Based" target = "_blank">Blackjack Game using Java Swing</a></li>
-                    </ul>
                 </div>
             </div>
-            <div class = "row project" id = "discordBotSection">
-                <div class = "row">
-                    <div class = "discordColumn">
-                        <img src = "images/projects/discordbot/botInfo.png" alt = "AZN Flush Discord Bot Info Tile">
+            <div class = "row">
+                <h1>AZN Flush Discord Bot <i class = "arrow rightArrow" id = "discordBotArrow"></i></h1>
+                <div class = "row project" id = "discordBotSection">
+                    <div class = "row">
+                        <div class = "discordColumn">
+                            <img src = "images/projects/discordbot/botInfo.png" alt = "AZN Flush Discord Bot Info Tile">
+                        </div>
+                        <div class = "discordColumn">
+                            <img src = "images/projects/discordbot/botHelp.png" alt = "AZN Flush Discord Bot Help Menu">
+                        </div>
+                        <div class = "discordColumn">
+                            <img src = "images/projects/discordbot/botEnd.png" alt = "AZN Flush Discord Bot End Information">
+                        </div>
                     </div>
-                    <div class = "discordColumn">
-                        <img src = "images/projects/discordbot/botHelp.png" alt = "AZN Flush Discord Bot Help Menu">
+                    <div class = "row description">
+                        <p>This card game gained popularity right around the start of the coronavirus pandemic. Though designed to be played in person, my friends and I quickly shifted the game to be played online using Discord.</p>
+                        <p>One of the main motivations for me creating this bot was how difficult it was to keep track of whose turn it currently was. Some specific cards only apply to the player reading it. The game, when played in person, allowed for each player to draw each card. When playing online, whoever had the deck had to draw all the cards and apply them in order of whose turn it currently was.</p>
+                        <p>On top of keeping track of whose turn it currently was, it also includes features that make the game easier to play such as a 3 second countdown timer and keeping track of how many cards a player has gone through.</p>
+                        <h3>Source Code is available on Github</h3>
+                        <ul>
+                            <li><a href = "https://github.com/Dan-Yee/AZNFlush-Discord-Bot" target = "_blank">AZN Flush Discord Bot</a></li>
+                        </ul>
+                        <hr>
                     </div>
-                    <div class = "discordColumn">
-                        <img src = "images/projects/discordbot/botEnd.png" alt = "AZN Flush Discord Bot End Information">
-                    </div>
-                </div>
-                <div class = "row description">
-                    <p>This card game gained popularity right around the start of the coronavirus pandemic. Though designed to be played in person, my friends and I quickly shifted the game to be played online using Discord.</p>
-                    <p>One of the main motivations for me creating this bot was how difficult it was to keep track of whose turn it currently was. Some specific cards only apply to the player reading it. The game, when played in person, allowed for each player to draw each card. When playing online, whoever had the deck had to draw all the cards and apply them in order of whose turn it currently was.</p>
-                    <p>On top of keeping track of whose turn it currently was, it also includes features that make the game easier to play such as a 3 second countdown timer and keeping track of how many cards a player has gone through.</p>
-                    <h3>Source Code is available on Github</h3>
-                    <ul>
-                        <li><a href = "https://github.com/Dan-Yee/AZNFlush-Discord-Bot" target = "_blank">AZN Flush Discord Bot</a></li>
-                    </ul>
                 </div>
             </div>
-            <div class = "row project" id = "interpreterSection">
-                <div class = "row">
-                    <div class = "interpreterColumn">
-                        <h3>Example Input</h3>
-                        <img src = "images/projects/interpreter/interpreterInput.png" alt = "Example Input for BASIC Interpreter">
+            <div class = "row">
+                <h1>BASIC Interpreter <i class = "arrow rightArrow" id = "interpreterArrow"></i></h1>
+                <div class = "row project" id = "interpreterSection">
+                    <div class = "row">
+                        <div class = "interpreterColumn">
+                            <h3>Example Input</h3>
+                            <img src = "images/projects/interpreter/interpreterInput.png" alt = "Example Input for BASIC Interpreter">
+                        </div>
+                        <div class = "interpreterColumn">
+                            <h3>Example Output</h3>
+                            <img src = "images/projects/interpreter/interpreterOutput.png" alt = "Example Output for BASIC Interpreter">
+                        </div>
                     </div>
-                    <div class = "interpreterColumn">
-                        <h3>Example Output</h3>
-                        <img src = "images/projects/interpreter/interpreterOutput.png" alt = "Example Output for BASIC Interpreter">
+                    <div class = "row description">
+                        <p>This was a semester long project for one of my university courses and it is by far the most comprehensive programming project I've ever completed.</p>
+                        <p>A programming language interpreters purpose is to take code from one language and execute it using another language. In this project, I interpreted a simplified version of the BASIC Programming Language using Java.</p>
+                        <p>There was three major components of this project: Lexer, Parser, Interpreter.</p>
+                        <ol>
+                            <li>The job of the Lexer was to break down Strings into different tokens. For example, "PRINT 2 + 2" would be separated into "PRINT", "NUMBER(2)", "PLUS", "NUMBER(2)".</li>
+                            <li>The job of the Parser was to take the tokens from the Lexer and form specific nodes with them. The "2 + 2" from earlier would be parsed into "MathOpNode(2, +, 2)" signifying that it can be evaluated into a number later on. The entire line "PRINT 2 + 2" would be parsed as "PrintNode([MathOpNode(2, +, 2)])" signifying that it is something to be printed out later on.</li>
+                            <li>The job of the Interpreter was to use the specified language, in this project Java, and execute all the parsed nodes. The example of "PrintNode([MathOpNode(2, +, 2)])" from the parser would create an output of "4" in the console of the Java program.</li>
+                        </ol>
+                        <h3>Source Code is available on Github</h3>
+                        <ul>
+                            <li><a href = "https://github.com/Dan-Yee/Spring-2021-ICSI311-Principles-of-Programming-Languages" target = "_blank">BASIC Interpreter</a></li>
+                        </ul>
+                        <hr>
                     </div>
-                </div>
-                <div class = "row description">
-                    <p>This was a semester long project for one of my university courses and it is by far the most comprehensive programming project I've ever completed.</p>
-                    <p>A programming language interpreters purpose is to take code from one language and execute it using another language. In this project, I interpreted a simplified version of the BASIC Programming Language using Java.</p>
-                    <p>There was three major components of this project: Lexer, Parser, Interpreter.</p>
-                    <ol>
-                        <li>The job of the Lexer was to break down Strings into different tokens. For example, "PRINT 2 + 2" would be separated into "PRINT", "NUMBER(2)", "PLUS", "NUMBER(2)".</li>
-                        <li>The job of the Parser was to take the tokens from the Lexer and form specific nodes with them. The "2 + 2" from earlier would be parsed into "MathOpNode(2, +, 2)" signifying that it can be evaluated into a number later on. The entire line "PRINT 2 + 2" would be parsed as "PrintNode([MathOpNode(2, +, 2)])" signifying that it is something to be printed out later on.</li>
-                        <li>The job of the Interpreter was to use the specified language, in this project Java, and execute all the parsed nodes. The example of "PrintNode([MathOpNode(2, +, 2)])" from the parser would create an output of "4" in the console of the Java program.</li>
-                    </ol>
-                    <h3>Source Code is available on Github</h3>
-                    <ul>
-                        <li><a href = "https://github.com/Dan-Yee/Spring-2021-ICSI311-Principles-of-Programming-Languages" target = "_blank">BASIC Interpreter</a></li>
-                    </ul>
                 </div>
             </div>
         </main>
