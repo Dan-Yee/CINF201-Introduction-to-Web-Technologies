@@ -2,12 +2,18 @@
  * Function for all pages
  */
 
+/* Enum representing the color scheme of the page between Light Mode and Dark Mode */
+const mode = {
+    DARKMODE: "Dark Mode",
+    LIGHTMODE: "Light Mode",
+}
+
 /*
 Function that flips the page between light mode and dark mode by changing text colors and background colors.
 */
-var lightMode = 0;                                              // lightMode 0 = dark mode, lightMode 1 = light mode
+let pageLightMode = mode.DARKMODE;
 $("#switchMode").click(function() {
-    if(lightMode == 0) {
+    if(pageLightMode == mode.DARKMODE) {
         // switching to light mode
 
         // editing general CSS for all pages
@@ -26,8 +32,8 @@ $("#switchMode").click(function() {
         $(".projects .project .description a").css({"color": "black", "border": "1px solid black"});
 
         $(this).html("Dark Mode");
-        lightMode = 1;
-    } else if(lightMode == 1) {
+        pageLightMode = mode.LIGHTMODE;
+    } else if(pageLightMode == mode.LIGHTMODE) {
         // switching to dark mode
 
         // editing general CSS for all pages
@@ -46,9 +52,9 @@ $("#switchMode").click(function() {
         $(".projects .project .description a").css({"color": "white", "border": "1px solid white"});
 
         $(this).html("Light Mode");
-        lightMode = 0;
+        pageLightMode = mode.DARKMODE;
     }
-    return lightMode;
+    return pageLightMode;
 });
 
 /**
