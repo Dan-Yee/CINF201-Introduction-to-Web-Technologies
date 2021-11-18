@@ -49,6 +49,7 @@ h1, h2, h3, h4 {
     border-width: 0px 3px 3px 0px;
     display: inline-block;
     padding: 5px;
+    cursor: pointer;
 }
 
 .rightArrow {
@@ -157,6 +158,12 @@ h1, h2, h3, h4 {
 .nav .farRight {
     float: left;
     width: 10%;
+}
+
+.nav .farRight ul li {
+    border: 1px solid white;
+    padding: 2%;
+    cursor: pointer;
 }
 
 /* CSS for About Me Page */
@@ -303,3 +310,5 @@ h1, h2, h3, h4 {
     max-width: 100%;
     height: auto;
 }
+
+/* CSS for Contact Me Page */
