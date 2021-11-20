@@ -31,6 +31,9 @@ $("#switchMode").click(function() {
         // editing CSS for Projects page to switch to light mode
         $(".projects .project .description a").css({"color": "black", "border": "1px solid black"});
 
+        // editing CSS for Contact Me page to switch to light mode
+        $(".contactme .contact .left form a").css({"color": "black", "border": "1px solid black"});
+
         $(this).html("Dark Mode");
         pageLightMode = mode.LIGHTMODE;
     } else if(pageLightMode == mode.LIGHTMODE) {
@@ -50,6 +53,9 @@ $("#switchMode").click(function() {
 
         // editing CSS for Projects page to switch to dark mode
         $(".projects .project .description a").css({"color": "white", "border": "1px solid white"});
+
+        // editing CSS for Contact Me page to switch to light mode
+        $(".contactme .contact .left form a").css({"color": "white", "border": "1px solid white"});
 
         $(this).html("Light Mode");
         pageLightMode = mode.DARKMODE;
@@ -153,4 +159,29 @@ $("#interpreterArrow").click(function() {
     // reset arrow positions of other projects that have been hidden
     $("#blackjackArrow").removeClass("downArrow").addClass("rightArrow");
     $("#discordBotArrow").removeClass("downArrow").addClass("rightArrow"); 
+});
+
+/**
+ * Functions for Contact Me Page
+ */
+$("#submitContactForm").click(function() {
+    $("#formSubmissionStatus").val("");
+
+    // validate that all the input areas aren't empty
+    if($("#name").val().length == 0) {
+        $("#formSubmissionStatus").html("Missing Information: Name");
+    } else if($("#phone").val().length == 0) {
+        $("#formSubmissionStatus").html("Missing Information: Phone Number");
+    } else if($("#email").val().length == 0) {
+        $("#formSubmissionStatus").html("Missing Information: E-Mail Address");
+    } else if($("#message").val().length == 0) {
+        $("#formSubmissionStatus").html("Missing Information: Message");
+    } else {
+        // fake a form submission lol
+        $("#name").val("");
+        $("#phone").val("");
+        $("#email").val("");
+        $("#message").val("");
+        $("#formSubmissionStatus").html("Thank you for submitting. You will be contacted soon.");
+    }
 });

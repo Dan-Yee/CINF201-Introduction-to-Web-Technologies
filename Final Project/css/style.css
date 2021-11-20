@@ -312,3 +312,64 @@ h1, h2, h3, h4 {
 }
 
 /* CSS for Contact Me Page */
+.contactme .contact .left {
+    width: 60%;
+    float: left;
+    margin-top: 2.5%;
+}
+
+.contactme .contact .right {
+    width: 40%;
+    float: left;
+    margin-top: 2.5%;
+}
+
+.contactme .contact .left form label {
+    font-family: "Courier New", monospace;
+    font-size: 1.25em;
+}
+
+.contactme .contact .left form input[type = text], .contactme .contact .left form textarea {
+    font-family: "Courier New", monospace;
+    font-size: 1em;
+    resize: none;
+    display: block;
+    margin: 2%;
+    width: 80%;
+    padding: 1% 1%;
+}
+
+.contactme .contact .left form a {
+    display: block;
+    margin-left: 2%;
+    text-align: center;
+    padding: 1%;
+    border: 1px solid white;
+    width: 20%;
+    text-decoration: none;
+    color: white;
+    font-family: "Courier New", monospace;
+    font-size: 1em;
+}
+
+.contactme .contact .right .left {
+    width: 30%;
+    float: left;
+}
+
+.contactme .contact .right .right {
+    width: 70%;
+    float: left;
+}
+
+.contactme .contact .right img {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    min-width: 50%;
+    max-width: 50%;
+}
+
+.contactme .contact .right .right p {
+    line-height: 3em;
+}
