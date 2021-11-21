@@ -370,6 +370,10 @@ h1, h2, h3, h4 {
     max-width: 50%;
 }
 
-.contactme .contact .right .right p {
-    line-height: 3em;
+.contactme .contact .right .right a {
+    font-family: "Courier New", monospace;
+    font-size: 1.25em;
+    color: white;
+    line-height: 3.5em;
+    text-decoration: none;
 }

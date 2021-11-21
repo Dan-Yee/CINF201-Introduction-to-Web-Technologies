@@ -33,6 +33,7 @@ $("#switchMode").click(function() {
 
         // editing CSS for Contact Me page to switch to light mode
         $(".contactme .contact .left form a").css({"color": "black", "border": "1px solid black"});
+        $(".contactme .contact .right .right a").css({"color": "black"});
 
         $(this).html("Dark Mode");
         pageLightMode = mode.LIGHTMODE;
@@ -56,6 +57,7 @@ $("#switchMode").click(function() {
 
         // editing CSS for Contact Me page to switch to light mode
         $(".contactme .contact .left form a").css({"color": "white", "border": "1px solid white"});
+        $(".contactme .contact .right .right a").css({"color": "white"});
 
         $(this).html("Light Mode");
         pageLightMode = mode.DARKMODE;
@@ -76,31 +78,31 @@ $(document).ready(function() {
 
 /* Function that toggles visibility of Skills section and adjusts arrow image */
 $("#skillsArrow").click(function() {
-    if($(this).hasClass("rightArrow")) {
+    if($(this).hasClass("rightArrow"))
         $(this).removeClass("rightArrow").addClass("downArrow");
-    } else {
+    else
         $(this).removeClass("downArrow").addClass("rightArrow");
-    }
+
     $("#skillsSection").fadeToggle();
 });
 
 /* Function that toggles visibility of Activities section and adjusts arrow image */
 $("#activitiesArrow").click(function() {
-    if($(this).hasClass("rightArrow")) {
+    if($(this).hasClass("rightArrow"))
         $(this).removeClass("rightArrow").addClass("downArrow");
-    } else {
+    else
         $(this).removeClass("downArrow").addClass("rightArrow");
-    }
+
     $("#activitiesSection").fadeToggle();
 });
 
 /* Function that toggles visibility of Experience section and adjusts arrow image */
 $("#experienceArrow").click(function() {
-    if($(this).hasClass("rightArrow")) {
+    if($(this).hasClass("rightArrow"))
         $(this).removeClass("rightArrow").addClass("downArrow");
-    } else {
+    else
         $(this).removeClass("downArrow").addClass("rightArrow");
-    }
+
     $("#experienceSection").fadeToggle();
 });
 
@@ -115,11 +117,11 @@ $(document).ready(function() {
 
 /* Show Blackjack Game project and hide other projects */
 $("#blackjackArrow").click(function() {
-    if($(this).hasClass("rightArrow")) {
+    if($(this).hasClass("rightArrow"))
         $(this).removeClass("rightArrow").addClass("downArrow");
-    } else {
+    else
         $(this).removeClass("downArrow").addClass("rightArrow");
-    }
+
     $("#blackjackSection").fadeToggle();
     $("#discordBotSection").hide();
     $("#interpreterSection").hide();
@@ -131,11 +133,11 @@ $("#blackjackArrow").click(function() {
 
 /* Show Discord Bot project and hide other projects */
 $("#discordBotArrow").click(function() {
-    if($(this).hasClass("rightArrow")) {
+    if($(this).hasClass("rightArrow"))
         $(this).removeClass("rightArrow").addClass("downArrow");
-    } else {
+    else
         $(this).removeClass("downArrow").addClass("rightArrow");
-    }
+
     $("#blackjackSection").hide();
     $("#discordBotSection").fadeToggle();
     $("#interpreterSection").hide();
@@ -147,11 +149,11 @@ $("#discordBotArrow").click(function() {
 
 /* Show BASIC Interpreter project and hide other projects */
 $("#interpreterArrow").click(function() {
-    if($(this).hasClass("rightArrow")) {
+    if($(this).hasClass("rightArrow"))
         $(this).removeClass("rightArrow").addClass("downArrow");
-    } else {
+    else
         $(this).removeClass("downArrow").addClass("rightArrow");
-    }
+
     $("#blackjackSection").hide();
     $("#discordBotSection").hide();
     $("#interpreterSection").fadeToggle();
@@ -165,18 +167,19 @@ $("#interpreterArrow").click(function() {
  * Functions for Contact Me Page
  */
 $("#submitContactForm").click(function() {
-    $("#formSubmissionStatus").val("");
+    $("#formSubmissionStatus").show();
+    //$("#formSubmissionStatus").val("");
 
     // validate that all the input areas aren't empty
-    if($("#name").val().length == 0) {
+    if($("#name").val().length == 0)
         $("#formSubmissionStatus").html("Missing Information: Name");
-    } else if($("#phone").val().length == 0) {
+    else if($("#phone").val().length == 0)
         $("#formSubmissionStatus").html("Missing Information: Phone Number");
-    } else if($("#email").val().length == 0) {
+    else if($("#email").val().length == 0)
         $("#formSubmissionStatus").html("Missing Information: E-Mail Address");
-    } else if($("#message").val().length == 0) {
+    else if($("#message").val().length == 0)
         $("#formSubmissionStatus").html("Missing Information: Message");
-    } else {
+    else {
         // fake a form submission lol
         $("#name").val("");
         $("#phone").val("");
@@ -184,4 +187,10 @@ $("#submitContactForm").click(function() {
         $("#message").val("");
         $("#formSubmissionStatus").html("Thank you for submitting. You will be contacted soon.");
     }
+
+    /* Source: https://www.w3schools.com/jsref/met_win_settimeout.asp */
+    // Hide any message following the form after 5 seconds
+    setTimeout(function() {
+        $("#formSubmissionStatus").hide();
+    }, 5000);
 });
