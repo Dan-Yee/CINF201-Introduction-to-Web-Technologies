@@ -20,6 +20,8 @@ $("#switchMode").click(function() {
         $(".page").css({"background-color": "white", "color": "black"});
         $(".nav .left ul a, .nav .right ul a").css({"color": "black"});
         $(".nav .farRight ul li").css({"border": "1px solid black"});
+        $("footer .siteMap a").css({"color": "black"});
+        $(".nav .farRight ul li a").css({"color": "black"});
 
         // editing CSS for About Me page to switch to light mode
         $(".aboutme .professional img, .aboutme .casual img").css({"border": "3px solid black"});
@@ -35,6 +37,10 @@ $("#switchMode").click(function() {
         $(".contactme .contact .left form a").css({"color": "black", "border": "1px solid black"});
         $(".contactme .contact .right .right a").css({"color": "black"});
 
+        // editing CSS for Site Map page to switch to light mode
+        $(".sitemap .index ul a").css({"color": "black"});
+
+
         $(this).html("Dark Mode");
         pageLightMode = mode.LIGHTMODE;
     } else if(pageLightMode == mode.LIGHTMODE) {
@@ -44,6 +50,8 @@ $("#switchMode").click(function() {
         $(".page").css({"background-color": "black", "color": "white"});
         $(".nav .left ul a, .nav .right ul a").css({"color": "white"});
         $(".nav .farRight ul li").css({"border": "1px solid white"});
+        $("footer .siteMap a").css({"color": "white"});
+        $(".nav .farRight ul li a").css({"color": "white"});
 
         // editing CSS for About Me page to switch to dark mode
         $(".aboutme .professional img, .aboutme .casual img").css({"border": "none"});
@@ -55,9 +63,12 @@ $("#switchMode").click(function() {
         // editing CSS for Projects page to switch to dark mode
         $(".projects .project .description a").css({"color": "white", "border": "1px solid white"});
 
-        // editing CSS for Contact Me page to switch to light mode
+        // editing CSS for Contact Me page to switch to dark mode
         $(".contactme .contact .left form a").css({"color": "white", "border": "1px solid white"});
         $(".contactme .contact .right .right a").css({"color": "white"});
+
+        // editing CSS for Site Map page to switch to dark mode
+        $(".sitemap .index ul a").css({"color": "white"});
 
         $(this).html("Light Mode");
         pageLightMode = mode.DARKMODE;
